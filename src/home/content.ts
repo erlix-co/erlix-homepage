@@ -1,6 +1,6 @@
 export type Language = "he" | "en";
 
-export const CONTACT_EMAIL = "erlix.co@gmail.com";
+export const CONTACT_EMAIL = "ierlich@gmail.com";
 
 export const homeContent = {
   he: {

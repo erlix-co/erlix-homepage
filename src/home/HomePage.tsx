@@ -63,7 +63,7 @@ export function HomePage() {
           <h1>{t.heroTitle}</h1>
           <p className="hero-sub">{t.heroSubtitle}</p>
           <div className="hero-actions">
-            <a className="btn btn-primary" href="http://localhost:5173">
+            <a className="btn btn-primary" href="https://erlix.net/linkcheck/">
               {t.heroPrimary}
             </a>
             <a className="btn btn-ghost" href={emailHref}>
@@ -88,7 +88,7 @@ export function HomePage() {
               {t.projectLiveTag ? <span className="project-tag">{t.projectLiveTag}</span> : null}
               <h3>{t.projectLiveTitle}</h3>
               <p>{t.projectLiveText}</p>
-              <a href="http://localhost:5173">{t.projectLiveCta}</a>
+              <a href="https://erlix.net/linkcheck/">{t.projectLiveCta}</a>
             </article>
 
             <article className="project-card">
