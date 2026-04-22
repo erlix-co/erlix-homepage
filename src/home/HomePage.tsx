@@ -33,27 +33,29 @@ export function HomePage() {
           <img src="/erlix-logo.png" alt="Erlix logo" />
         </a>
 
-        <nav className="home-links" aria-label="Main navigation">
-          <a href="#projects">{t.navProjects}</a>
-          <a href="#about">{t.navAbout}</a>
-          <a href="#contact">{t.navContact}</a>
-        </nav>
+        <div className="home-nav__bottom">
+          <nav className="home-links" aria-label="Main navigation">
+            <a href="#projects">{t.navProjects}</a>
+            <a href="#about">{t.navAbout}</a>
+            <a href="#contact">{t.navContact}</a>
+          </nav>
 
-        <div className="home-lang" role="group" aria-label="Language switch">
-          <button
-            type="button"
-            className={language === "he" ? "active" : ""}
-            onClick={() => setLanguage("he")}
-          >
-            עב
-          </button>
-          <button
-            type="button"
-            className={language === "en" ? "active" : ""}
-            onClick={() => setLanguage("en")}
-          >
-            EN
-          </button>
+          <div className="home-lang" role="group" aria-label="Language switch">
+            <button
+              type="button"
+              className={language === "he" ? "active" : ""}
+              onClick={() => setLanguage("he")}
+            >
+              עב
+            </button>
+            <button
+              type="button"
+              className={language === "en" ? "active" : ""}
+              onClick={() => setLanguage("en")}
+            >
+              EN
+            </button>
+          </div>
         </div>
       </header>
 
