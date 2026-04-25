@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import { homeContent, type Language } from "./content";
+import { CONTACT_EMAIL, homeContent, type Language } from "./content";
+
+const emailHref = `mailto:${CONTACT_EMAIL}`;
 
 export function HomePage() {
   const [language, setLanguage] = useState<Language>(
@@ -35,6 +37,7 @@ export function HomePage() {
           <nav className="home-links" aria-label="Main navigation">
             <a href="#projects">{t.navProjects}</a>
             <a href="#about">{t.navAbout}</a>
+            <a href={emailHref}>{t.navContact}</a>
           </nav>
 
           <div className="home-lang" role="group" aria-label="Language switch">

@@ -74,11 +74,11 @@ a {
   padding: 0.45rem 0.8rem;
   border: 1px solid rgba(95, 155, 255, 0.25);
   border-radius: 16px;
-  background: #ffffff;
+  background: rgba(8, 20, 46, 0.7);
 }
 
 .home-brand img {
-  width: min(100%, 540px);
+  width: min(100%, 378px);
   height: auto;
   display: block;
   border-radius: 12px;
@@ -356,7 +356,7 @@ a {
   }
 
   .home-brand img {
-    width: min(100%, 460px);
+    width: min(100%, 322px);
   }
 
   .home-nav__bottom {
