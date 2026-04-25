@@ -6,7 +6,6 @@ export const homeContent = {
   he: {
     navProjects: "פרויקטים",
     navAbout: "מי אנחנו",
-    navContact: "יצירת קשר",
     heroEyebrow: "Erlix Smart Digital Solutions",
     heroTitle: "פתרונות דיגיטליים חכמים.",
     heroSubtitle:
@@ -25,16 +24,24 @@ export const homeContent = {
     projectLiveCta: "כנס",
     projectSoonTag: "בקרוב",
     projectSoonTitle: "Project 02",
-    projectSoonText: "פרויקט חדש בפיתוח. יפורסם כאן ברגע שיהיה מוכן.",
-    ctaTitle: "רוצים לדבר על הפרויקט הבא שלכם?",
-    ctaText: "נשמח להבין את הצורך שלכם ולהציע כיוון מדויק.",
-    ctaButton: "שליחת מייל",
+    projectSoonText:
+      "פרויקט חדש בפיתוח. כלי שימנע מכם לשלוח בטעות הודעת אימייל למספר אנשי קשר בצורה גלויה.",
+    project03Tag: "בפיתוח",
+    project03Title: "Project 03",
+    project03Text:
+      "אפליקציה שתעיר אתכם באמצע הלילה כשמחיר הטיסה ירד, או שהתפנה מקום בטיסה שאתם מאוד מעוניינים בה.",
+    project04Tag: "בשימוש",
+    project04Title: "Project 04",
+    project04Text:
+      "אפליקציה שכבר בשימוש: שליחה אוטומטית של הודעות SMS למספר רחב של נמענים, עם נתונים אישיים לכל נמען. לדוגמה: יתרת חובה של לקוחות, שעת פגישה לפציינטים אצל הרופא וכדו'.",
+    project05Tag: "בפיתוח",
+    project05Title: "Project 05",
+    project05Text: "תוכנה חכמה של זיהוי פנים לצורך מיון תמונות משפחתיות.",
     footer: "כל הזכויות שמורות ל-Erlix",
   },
   en: {
     navProjects: "Projects",
     navAbout: "About",
-    navContact: "Contact",
     heroEyebrow: "Erlix Smart Digital Solutions",
     heroTitle: "Smart Digital Solutions.",
     heroSubtitle:
@@ -53,10 +60,19 @@ export const homeContent = {
     projectLiveCta: "Enter",
     projectSoonTag: "Coming Soon",
     projectSoonTitle: "Project 02",
-    projectSoonText: "A new product is in development and will be published here soon.",
-    ctaTitle: "Want to discuss your next project?",
-    ctaText: "We can review your idea and suggest a focused implementation path.",
-    ctaButton: "Send Email",
+    projectSoonText:
+      "New project in development: a tool that prevents accidentally sending visible group emails to multiple contacts.",
+    project03Tag: "In Development",
+    project03Title: "Project 03",
+    project03Text:
+      "An app that wakes you up at night when a flight price drops or when a seat opens up on a flight you really want.",
+    project04Tag: "In Use",
+    project04Title: "Project 04",
+    project04Text:
+      "Already in use: automatic SMS sending to a wide list of recipients with personalized data for each recipient, such as customer debt balance or doctor appointment time.",
+    project05Tag: "In Development",
+    project05Title: "Project 05",
+    project05Text: "Smart face-recognition software for organizing family photos.",
     footer: "All rights reserved by Erlix",
   },
 } as const;

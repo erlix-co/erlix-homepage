@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import { CONTACT_EMAIL, homeContent, type Language } from "./content";
-
-const emailHref = `mailto:${CONTACT_EMAIL}`;
+import { homeContent, type Language } from "./content";
 
 export function HomePage() {
   const [language, setLanguage] = useState<Language>(
@@ -37,7 +35,6 @@ export function HomePage() {
           <nav className="home-links" aria-label="Main navigation">
             <a href="#projects">{t.navProjects}</a>
             <a href="#about">{t.navAbout}</a>
-            <a href="#contact">{t.navContact}</a>
           </nav>
 
           <div className="home-lang" role="group" aria-label="Language switch">
@@ -68,9 +65,6 @@ export function HomePage() {
             <a className="btn btn-primary" href="https://erlix.net/linkcheck/">
               {t.heroPrimary}
             </a>
-            <a className="btn btn-ghost" href={emailHref}>
-              {t.heroSecondary}
-            </a>
           </div>
         </section>
 
@@ -98,15 +92,25 @@ export function HomePage() {
               <h3>{t.projectSoonTitle}</h3>
               <p>{t.projectSoonText}</p>
             </article>
-          </div>
-        </section>
 
-        <section id="contact" className="contact section-card" data-reveal>
-          <h2>{t.ctaTitle}</h2>
-          <p>{t.ctaText}</p>
-          <a className="btn btn-primary" href={emailHref}>
-            {t.ctaButton}
-          </a>
+            <article className="project-card">
+              <span className="project-tag project-tag-muted">{t.project03Tag}</span>
+              <h3>{t.project03Title}</h3>
+              <p>{t.project03Text}</p>
+            </article>
+
+            <article className="project-card">
+              <span className="project-tag project-tag-muted">{t.project04Tag}</span>
+              <h3>{t.project04Title}</h3>
+              <p>{t.project04Text}</p>
+            </article>
+
+            <article className="project-card">
+              <span className="project-tag project-tag-muted">{t.project05Tag}</span>
+              <h3>{t.project05Title}</h3>
+              <p>{t.project05Text}</p>
+            </article>
+          </div>
         </section>
       </main>
 
