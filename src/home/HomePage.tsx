@@ -10,6 +10,10 @@ export function HomePage() {
   const t = homeContent[language];
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, []);
+
+  useEffect(() => {
     const nodes = document.querySelectorAll<HTMLElement>("[data-reveal]");
     const observer = new IntersectionObserver(
       (entries) => {
@@ -28,33 +32,37 @@ export function HomePage() {
 
   return (
     <div className="home" dir={language === "he" ? "rtl" : "ltr"} lang={language}>
-      <header className="home-nav">
-        <a className="home-brand" href="#top" aria-label="Erlix home">
-          <img src="/erlix-logo.png" alt="Erlix logo" />
-        </a>
+      <header className="home-header">
+        <div className="home-nav">
+          <div className="home-brand-panel">
+            <div className="home-brand" role="img" aria-label="Erlix">
+              <img src="/erlix-logo.png" alt="" />
+            </div>
+          </div>
 
-        <div className="home-nav__bottom">
-          <nav className="home-links" aria-label="Main navigation">
-            <a href="#projects">{t.navProjects}</a>
-            <a href="#about">{t.navAbout}</a>
-            <a href={emailHref}>{t.navContact}</a>
-          </nav>
+          <div className="home-nav__bottom">
+            <nav className="home-links" aria-label="Main navigation">
+              <a href="#projects">{t.navProjects}</a>
+              <a href="#about">{t.navAbout}</a>
+              <a href={emailHref}>{t.navContact}</a>
+            </nav>
 
-          <div className="home-lang" role="group" aria-label="Language switch">
-            <button
-              type="button"
-              className={language === "he" ? "active" : ""}
-              onClick={() => setLanguage("he")}
-            >
-              עב
-            </button>
-            <button
-              type="button"
-              className={language === "en" ? "active" : ""}
-              onClick={() => setLanguage("en")}
-            >
-              EN
-            </button>
+            <div className="home-lang" role="group" aria-label="Language switch">
+              <button
+                type="button"
+                className={language === "he" ? "active" : ""}
+                onClick={() => setLanguage("he")}
+              >
+                עב
+              </button>
+              <button
+                type="button"
+                className={language === "en" ? "active" : ""}
+                onClick={() => setLanguage("en")}
+              >
+                EN
+              </button>
+            </div>
           </div>
         </div>
       </header>
