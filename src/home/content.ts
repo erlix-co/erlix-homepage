@@ -6,6 +6,7 @@ export const homeContent = {
   he: {
     navProjects: "פרויקטים",
     navAbout: "מי אנחנו",
+    navContact: "יצירת קשר",
     heroEyebrow: "Erlix Smart Digital Solutions",
     heroTitle: "פתרונות דיגיטליים חכמים.",
     heroSubtitle:
@@ -14,7 +15,7 @@ export const homeContent = {
     heroSecondary: "צור קשר במייל",
     aboutTitle: "מי אנחנו",
     aboutBody:
-      "Erlix מפתחת מוצרים דיגיטליים ממוקדי ערך, עם דגש על אבטחה, ביצועים ועיצוב נקי. כל פרויקט נבנה כדי לפתור בעיה אמיתית באופן קל לשימוש.",
+      "Erlix מפתחת מוצרים דיגיטליים ממוקדי ערך, עם דגש על אבטחה, ביצועים ועיצוב נקי. כל פרויקט נבנה כדי לפתור בעיות יומיומיות באופן קל לשימוש.",
     projectsTitle: "הכלים שלנו",
     projectsSubtitle: "כרגע זמין פרויקט אחד פעיל, ועוד פרויקטים בדרך.",
     projectLiveTag: "",
@@ -33,7 +34,7 @@ export const homeContent = {
     project04Tag: "בשימוש",
     project04Title: "Project 04",
     project04Text:
-      "אפליקציה שכבר בשימוש: שליחה אוטומטית של הודעות SMS למספר רחב של נמענים, עם נתונים אישיים לכל נמען. לדוגמה: יתרת חובה של לקוחות, שעת פגישה לפציינטים אצל הרופא וכדו'.",
+      "אפליקציה שכבר בשימוש: שליחה אוטומטית של הודעות SMS למספר רחב של נמענים, עם נתונים אישיים לכל נמען. לדוגמה: יתרת חובה של לקוחות, שעת פגישה לפציינטים אצל הרופא וכדו'. ממתינה לאישור רגולטורי.",
     project05Tag: "בפיתוח",
     project05Title: "Project 05",
     project05Text: "תוכנה חכמה של זיהוי פנים לצורך מיון תמונות משפחתיות.",
@@ -42,6 +43,7 @@ export const homeContent = {
   en: {
     navProjects: "Projects",
     navAbout: "About",
+    navContact: "Contact",
     heroEyebrow: "Erlix Smart Digital Solutions",
     heroTitle: "Smart Digital Solutions.",
     heroSubtitle:
@@ -50,7 +52,7 @@ export const homeContent = {
     heroSecondary: "Contact by Email",
     aboutTitle: "About Us",
     aboutBody:
-      "Erlix develops value focused digital products with emphasis on security, performance, and clean design. Every project is built to solve a real problem in an easy to use way.",
+      "Erlix develops value focused digital products with emphasis on security, performance, and clean design. Every project is built to solve everyday problems in an easy to use way.",
     projectsTitle: "Our Tools",
     projectsSubtitle: "One live project is available right now, more are coming soon.",
     projectLiveTag: "",
@@ -69,7 +71,7 @@ export const homeContent = {
     project04Tag: "In Use",
     project04Title: "Project 04",
     project04Text:
-      "Already in use: automatic SMS sending to a wide list of recipients with personalized data for each recipient, such as customer debt balance or doctor appointment time.",
+      "Already in use: automatic SMS sending to a wide list of recipients with personalized data for each recipient, such as customer debt balance or doctor appointment time. Pending regulatory approval.",
     project05Tag: "In Development",
     project05Title: "Project 05",
     project05Text: "Smart face-recognition software for organizing family photos.",
