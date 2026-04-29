@@ -95,14 +95,30 @@ export function HomePage() {
               {t.projectLiveTag ? <span className="project-tag">{t.projectLiveTag}</span> : null}
               <h3>{t.projectLiveTitle}</h3>
               <p>{t.projectLiveText}</p>
-              <a href="https://erlix.net/linkcheck/">{t.projectLiveCta}</a>
+              <a
+                className="project-card__cta project-card__cta-with-logo project-card__cta-linkcheck"
+                href="https://erlix.net/linkcheck/"
+              >
+                <img
+                  className="project-card__logo-large project-card__logo-large-linkcheck"
+                  src="/project-logos/linkcheck-logo.png"
+                  alt="LinkCheck logo"
+                />
+                <span>{t.projectLiveCta}</span>
+              </a>
             </article>
 
             <article className="project-card">
               <span className="project-tag project-tag-muted">{t.projectSoonTag}</span>
               <h3>{t.projectSoonTitle}</h3>
               <p>{t.projectSoonText}</p>
-              <a href="https://erlix.net/bcc-alert/">{t.projectSoonCta}</a>
+              <a
+                className="project-card__cta project-card__cta-with-logo project-card__cta-bcc"
+                href="https://erlix.net/bcc-alert/"
+              >
+                <img className="project-card__logo-large" src="/project-logos/bcc-alert-logo.png" alt="BCC Alert logo" />
+                <span>{t.projectSoonCta}</span>
+              </a>
             </article>
 
             <article className="project-card">
