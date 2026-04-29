@@ -102,6 +102,7 @@ export function HomePage() {
               <span className="project-tag project-tag-muted">{t.projectSoonTag}</span>
               <h3>{t.projectSoonTitle}</h3>
               <p>{t.projectSoonText}</p>
+              <a href="https://erlix.net/bcc-alert/">{t.projectSoonCta}</a>
             </article>
 
             <article className="project-card">

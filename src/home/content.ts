@@ -27,6 +27,7 @@ export const homeContent = {
     projectSoonTitle: "Project 02",
     projectSoonText:
       "פרויקט חדש בפיתוח. כלי שימנע מכם לשלוח בטעות הודעת אימייל למספר אנשי קשר בצורה גלויה.",
+    projectSoonCta: "כנס",
     project03Tag: "בפיתוח",
     project03Title: "Project 03",
     project03Text:
@@ -64,6 +65,7 @@ export const homeContent = {
     projectSoonTitle: "Project 02",
     projectSoonText:
       "New project in development: a tool that prevents accidentally sending visible group emails to multiple contacts.",
+    projectSoonCta: "Enter",
     project03Tag: "In Development",
     project03Title: "Project 03",
     project03Text:
