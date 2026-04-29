@@ -411,11 +411,11 @@ a {
 
 .project-card__cta-bcc {
   color: #0d2e68;
-  background: #ffffff;
+  background: #f7f7f7;
 }
 
 .project-card__cta-bcc:hover {
-  background: #f2f7ff;
+  background: #f7f7f7;
 }
 
 .contact .btn {
