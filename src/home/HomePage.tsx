@@ -125,6 +125,13 @@ export function HomePage() {
               <span className="project-tag project-tag-muted">{t.project03Tag}</span>
               <h3>{t.project03Title}</h3>
               <p>{t.project03Text}</p>
+              <a
+                className="project-card__cta project-card__cta-with-logo project-card__cta-sms"
+                href="https://erlix.net/sms-sender/"
+              >
+                <img className="project-card__logo-large" src="/project-logos/sms-sender-logo.png" alt="SMS Sender logo" />
+                <span>{t.project03Cta}</span>
+              </a>
             </article>
 
             <article className="project-card">

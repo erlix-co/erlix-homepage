@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMS Sender | Erlix</title>
+    <meta
+      name="description"
+      content="SMS Sender by Erlix - centralized SMS delivery with personalized CSV placeholders."
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 2rem 1rem;
+        font-family: "Rubik", sans-serif;
+        color: #eff4ff;
+        background:
+          radial-gradient(circle at 12% 15%, rgba(53, 195, 255, 0.2), transparent 35%),
+          radial-gradient(circle at 85% 12%, rgba(45, 140, 240, 0.25), transparent 42%),
+          linear-gradient(150deg, #070f24 0%, #0d1f47 100%);
+      }
+
+      .card {
+        width: min(980px, 100%);
+        border: 1px solid rgba(95, 155, 255, 0.3);
+        border-radius: 24px;
+        background: rgba(8, 20, 46, 0.75);
+        box-shadow: 0 24px 50px rgba(3, 8, 23, 0.45);
+        padding: clamp(1.2rem, 3vw, 2rem);
+      }
+
+      .top-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .lang-toggle {
+        display: flex;
+        border: 1px solid rgba(95, 155, 255, 0.35);
+        border-radius: 999px;
+        overflow: hidden;
+        background: rgba(12, 25, 54, 0.65);
+      }
+
+      .lang-toggle button {
+        border: none;
+        background: transparent;
+        color: #b6c7ea;
+        font-family: "Rubik", sans-serif;
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 0.36rem 0.85rem;
+        cursor: pointer;
+      }
+
+      .lang-toggle button.active {
+        background: #2d8cf0;
+        color: #fff;
+        cursor: default;
+      }
+
+      .site-home-link {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .site-home-link img {
+        height: clamp(56px, 15.6vw, 82px);
+        width: auto;
+        display: block;
+      }
+
+      .logo-wrap {
+        border-radius: 24px;
+        background: #f7f7f7;
+        padding: 0.45rem;
+        width: fit-content;
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+      }
+
+      .logo-wrap img {
+        width: min(100%, 186px);
+        height: auto;
+        display: block;
+      }
+
+      h1 {
+        margin: 1rem 0 0.7rem;
+        text-align: center;
+        font-size: clamp(1.35rem, 3.4vw, 2.1rem);
+      }
+
+      p {
+        margin: 0.5rem 0;
+        line-height: 1.85;
+        color: #d7e5ff;
+        font-size: clamp(1rem, 2vw, 1.08rem);
+      }
+
+      .videos {
+        margin-top: 1.2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+      }
+
+      video {
+        width: min(100%, 180px);
+        justify-self: center;
+        border-radius: 16px;
+        border: 1px solid rgba(95, 155, 255, 0.35);
+        background: #000;
+      }
+
+      @media (max-width: 720px) {
+        .top-row {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .site-home-link {
+          justify-content: center;
+        }
+
+        .logo-wrap {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="top-row">
+        <a class="site-home-link" href="https://erlix.net/" aria-label="חזרה לדף הבית">
+          <img src="../erlix-logo.png" alt="Erlix home" />
+        </a>
+        <div class="lang-toggle" role="group" aria-label="Language switch">
+          <button id="lang-he" class="active" type="button">עב</button>
+          <button id="lang-en" type="button">EN</button>
+        </div>
+      </div>
+      <div class="logo-wrap">
+        <img src="./icon_sms_sender.png" alt="SMS Sender logo" />
+      </div>
+      <h1 data-he="SMS Sender" data-en="SMS Sender">SMS Sender</h1>
+      <p
+        data-he="אפליקציה פשוטה וקלה לתפעול לשליחת הודעות SMS בצורה מרוכזת, עם נתונים אישיים לכל נמען, ע&quot;י העלאת קובץ מסוג CSV הכולל עמודת שם, טלפון, סכום, עוד."
+        data-en="A simple and easy app for centralized SMS delivery, with personalized data for each recipient, by uploading a CSV file that includes columns such as name, phone, amount, and more."
+      >
+        אפליקציה פשוטה וקלה לתפעול לשליחת הודעות SMS בצורה מרוכזת, עם נתונים אישיים לכל נמען, ע"י העלאת קובץ מסוג
+        CSV הכולל עמודת שם, טלפון, סכום, עוד.
+      </p>
+      <p
+        data-he="ניתן לשלב את כל סוגי הנתונים, בשימת לב ל[סוגריים] המרובעות לכותרות הרצויות. לדוגמה: שלום מר [שם]. נבקש להביא לידעתך כי הסכום הרשום בחשבונך הינו סך [סכום] ש&quot;ח נכון לתאריך [עוד]."
+        data-en="You can combine any data type by using [square brackets] for placeholders. Example: Dear Mr. [Name], please note that your account balance is [Amount] ILS as of [More]."
+      >
+        ניתן לשלב את כל סוגי הנתונים, בשימת לב ל[סוגריים] המרובעות לכותרות הרצויות. לדוגמה: שלום מר [שם]. נבקש להביא
+        לידעתך כי הסכום הרשום בחשבונך הינו סך [סכום] ש"ח נכון לתאריך [עוד].
+      </p>
+      <p
+        data-he="או לדוגמה: משפחת [שם] שלום וברכה. התור שלכם נקבע לשעה [עוד], דמי השתתפות עצמית סך [סכום] ש&quot;ח, וההודעה תשלח לכל הנמענים עם הפרטים המיועדים עבורם."
+        data-en="Another example: Hello [Name] family, your appointment is scheduled for [More], participation fee is [Amount] ILS, and each recipient receives a message with their own personal details."
+      >
+        או לדוגמה: משפחת [שם] שלום וברכה. התור שלכם נקבע לשעה [עוד], דמי השתתפות עצמית סך [סכום] ש"ח, וההודעה תשלח
+        לכל הנמענים עם הפרטים המיועדים עבורם.
+      </p>
+      <section class="videos">
+        <video controls preload="metadata" src="./Video01-compressed.mp4"></video>
+        <video controls preload="metadata" src="./Video02-compressed.mp4"></video>
+      </section>
+    </main>
+    <script>
+      const heBtn = document.getElementById("lang-he");
+      const enBtn = document.getElementById("lang-en");
+      const translatable = Array.from(document.querySelectorAll("[data-he][data-en]"));
+
+      function setLanguage(lang) {
+        const isHe = lang === "he";
+        document.documentElement.lang = isHe ? "he" : "en";
+        document.documentElement.dir = isHe ? "rtl" : "ltr";
+        heBtn.classList.toggle("active", isHe);
+        enBtn.classList.toggle("active", !isHe);
+        translatable.forEach((el) => {
+          el.textContent = isHe ? el.getAttribute("data-he") : el.getAttribute("data-en");
+        });
+      }
+
+      heBtn.addEventListener("click", () => setLanguage("he"));
+      enBtn.addEventListener("click", () => setLanguage("en"));
+    </script>
+  </body>
+</html>

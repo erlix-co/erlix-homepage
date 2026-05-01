@@ -418,6 +418,15 @@ a {
   background: #f7f7f7;
 }
 
+.project-card__cta-sms {
+  color: #0d2e68;
+  background: #f7f7f7;
+}
+
+.project-card__cta-sms:hover {
+  background: #f7f7f7;
+}
+
 .contact .btn {
   margin-top: 0.9rem;
 }
