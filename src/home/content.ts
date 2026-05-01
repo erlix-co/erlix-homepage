@@ -28,14 +28,15 @@ export const homeContent = {
     projectSoonText:
       "פרויקט חדש בפיתוח. כלי שימנע מכם לשלוח בטעות הודעת אימייל למספר אנשי קשר בצורה גלויה.",
     projectSoonCta: "כנס",
-    project03Tag: "בפיתוח",
+    project03Tag: "בשימוש",
     project03Title: "Project 03",
     project03Text:
-      "אפליקציה שתעיר אתכם באמצע הלילה כשמחיר הטיסה ירד, או שהתפנה מקום בטיסה שאתם מאוד מעוניינים בה.",
-    project04Tag: "בשימוש",
+      "אפליקציה לשליחה אוטומטית של הודעות SMS למספר רחב של נמענים, עם נתונים אישיים לכל נמען. לדוגמה: יתרת חובה של לקוחות, שעת פגישה למוזמנים לפי שעות וכדו'.",
+    project03Cta: "כנס",
+    project04Tag: "בפיתוח",
     project04Title: "Project 04",
     project04Text:
-      "אפליקציה מוכנה להעלאה: שליחה אוטומטית של הודעות SMS למספר רחב של נמענים, עם נתונים אישיים לכל נמען. לדוגמה: יתרת חובה של לקוחות, שעת פגישה לפציינטים אצל הרופא וכדו'. ממתינה לאישור רגולטורי.",
+      "אפליקציה שתעיר אתכם באמצע הלילה כשמחיר הטיסה ירד, או שהתפנה מקום בטיסה שאתם מאוד מעוניינים בה.",
     project05Tag: "בפיתוח",
     project05Title: "Project 05",
     project05Text: "תוכנה חכמה של זיהוי פנים לצורך מיון תמונות משפחתיות.",
@@ -66,14 +67,15 @@ export const homeContent = {
     projectSoonText:
       "New project in development: a tool that prevents accidentally sending visible group emails to multiple contacts.",
     projectSoonCta: "Enter",
-    project03Tag: "In Development",
+    project03Tag: "In Use",
     project03Title: "Project 03",
     project03Text:
-      "An app that wakes you up at night when a flight price drops or when a seat opens up on a flight you really want.",
-    project04Tag: "In Use",
+      "A ready-to-launch app for automatic SMS sending to a large recipient list, with personalized data per recipient such as customer debt balance or doctor appointment time. Pending regulatory approval.",
+    project03Cta: "Enter",
+    project04Tag: "In Development",
     project04Title: "Project 04",
     project04Text:
-      "Already in use: automatic SMS sending to a wide list of recipients with personalized data for each recipient, such as customer debt balance or doctor appointment time. Pending regulatory approval.",
+      "An app that wakes you up at night when a flight price drops or when a seat opens up on a flight you really want.",
     project05Tag: "In Development",
     project05Title: "Project 05",
     project05Text: "Smart face-recognition software for organizing family photos.",
