@@ -26,7 +26,7 @@ export const homeContent = {
     projectSoonTag: "בקרוב",
     projectSoonTitle: "Project 02",
     projectSoonText:
-      "פרויקט חדש בפיתוח. כלי שימנע מכם לשלוח בטעות הודעת אימייל למספר אנשי קשר בצורה גלויה.",
+      "כלי שימנע מכם לשלוח בטעות הודעת אימייל למספר אנשי קשר בצורה גלויה. הכלי בבדיקות אצל קבוצת בדיקה לקראת השקה",
     projectSoonCta: "כנס",
     project03Tag: "בשימוש",
     project03Title: "Project 03",
