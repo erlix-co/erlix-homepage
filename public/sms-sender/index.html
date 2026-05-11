@@ -6,7 +6,13 @@
     <title>SMS Sender | Erlix</title>
     <meta
       name="description"
-      content="SMS Sender by Erlix - centralized SMS delivery with personalized CSV placeholders."
+      content="SMS Sender — שליחת SMS מותאמים אישית מרשימה (Excel או CSV), לשימוש ארגוני וקהילתי."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap"
+      rel="stylesheet"
     />
     <style>
       :root {
@@ -22,7 +28,7 @@
         min-height: 100vh;
         display: grid;
         place-items: center;
-        padding: 2rem 1rem;
+        padding: 2rem 1rem 3rem;
         font-family: "Rubik", sans-serif;
         color: #eff4ff;
         background:
@@ -108,11 +114,76 @@
         font-size: clamp(1.35rem, 3.4vw, 2.1rem);
       }
 
+      h2.section-title {
+        margin: 1.6rem 0 0.85rem;
+        font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+        font-weight: 600;
+        color: #e8f0ff;
+        border-bottom: 1px solid rgba(95, 155, 255, 0.25);
+        padding-bottom: 0.45rem;
+      }
+
       p {
         margin: 0.5rem 0;
         line-height: 1.85;
         color: #d7e5ff;
         font-size: clamp(1rem, 2vw, 1.08rem);
+      }
+
+      .screenshots {
+        margin-top: 0.5rem;
+      }
+
+      .screenshot-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.1rem;
+        align-items: start;
+      }
+
+      .shot {
+        margin: 0;
+        border-radius: 16px;
+        border: 1px solid rgba(95, 155, 255, 0.35);
+        background: rgba(5, 14, 36, 0.55);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .shot img {
+        width: 100%;
+        height: auto;
+        vertical-align: middle;
+        display: block;
+        background: #0a1428;
+      }
+
+      .shot figcaption {
+        padding: 0.65rem 0.75rem 0.85rem;
+        font-size: 0.88rem;
+        line-height: 1.5;
+        color: #b8c9ec;
+      }
+
+      .shot.missing-img img {
+        display: none;
+      }
+
+      .shot .shot-fallback {
+        display: none;
+        aspect-ratio: 9 / 18;
+        place-items: center;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+        color: #8fa6d4;
+        background: linear-gradient(180deg, rgba(20, 40, 80, 0.5), rgba(8, 18, 40, 0.85));
+        border-bottom: 1px solid rgba(95, 155, 255, 0.2);
+      }
+
+      .shot.missing-img .shot-fallback {
+        display: grid;
       }
 
       .videos {
@@ -128,6 +199,25 @@
         border-radius: 16px;
         border: 1px solid rgba(95, 155, 255, 0.35);
         background: #000;
+      }
+
+      .site-footer {
+        margin-top: 1.75rem;
+        padding-top: 1.1rem;
+        border-top: 1px solid rgba(95, 155, 255, 0.22);
+        text-align: center;
+        font-size: 0.95rem;
+        color: #a9bce5;
+      }
+
+      .site-footer a {
+        color: #6ec8ff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .site-footer a:hover {
+        text-decoration: underline;
       }
 
       @media (max-width: 720px) {
@@ -162,30 +252,89 @@
       </div>
       <h1 data-he="SMS Sender" data-en="SMS Sender">SMS Sender</h1>
       <p
-        data-he="אפליקציה פשוטה וקלה לתפעול לשליחת הודעות SMS בצורה מרוכזת, עם נתונים אישיים לכל נמען, ע&quot;י העלאת קובץ מסוג CSV הכולל עמודת שם, טלפון, סכום, עוד."
-        data-en="A simple and easy app for centralized SMS delivery, with personalized data for each recipient, by uploading a CSV file that includes columns such as name, phone, amount, and more."
+        data-he="SMS Sender היא אפליקציה לטלפון אנדרואיד, מיועדת לעמותות, בתי ספר, ארגונים וקהילות שרוצים לשלוח הודעות טקסט (SMS) לרשימת אנשים — כשלכל אחד מופיעים בפניו המילים והמספרים שמתאימים לו. אין צורך לכתוב הודעה נפרדת לכל אדם: כותבים פעם אחת תבנית, והאפליקציה ממלאת אוטומטית את הפרטים מקובץ הרשימה שלכם."
+        data-en="SMS Sender is an Android app for nonprofits, schools, organizations, and communities that need to send text messages (SMS) to a list of people — with each person seeing the words and numbers that apply to them. You do not write a separate message for every contact: you write one template, and the app fills in the details from your list file."
       >
-        אפליקציה פשוטה וקלה לתפעול לשליחת הודעות SMS בצורה מרוכזת, עם נתונים אישיים לכל נמען, ע"י העלאת קובץ מסוג
-        CSV הכולל עמודת שם, טלפון, סכום, עוד.
+        SMS Sender היא אפליקציה לטלפון אנדרואיד, מיועדת לעמותות, בתי ספר, ארגונים וקהילות שרוצים לשלוח הודעות
+        טקסט (SMS) לרשימת אנשים — כשלכל אחד מופיעים בפניו המילים והמספרים שמתאימים לו. אין צורך לכתוב הודעה נפרדת
+        לכל אדם: כותבים פעם אחת תבנית, והאפליקציה ממלאת אוטומטית את הפרטים מקובץ הרשימה שלכם.
       </p>
       <p
-        data-he="ניתן לשלב את כל סוגי הנתונים, בשימת לב ל[סוגריים] המרובעות לכותרות הרצויות. לדוגמה: שלום מר [שם]. נבקש להביא לידעתך כי הסכום הרשום בחשבונך הינו סך [סכום] ש&quot;ח נכון לתאריך [עוד]."
-        data-en="You can combine any data type by using [square brackets] for placeholders. Example: Dear Mr. [Name], please note that your account balance is [Amount] ILS as of [More]."
+        data-he="בפועל זה פשוט: מייבאים לתוך האפליקציה קובץ אקסל או CSV עם העמודות שלכם (למשל שם, טלפון, סכום, שעה), כותבים את נוסח ההודעה, רואים תצוגה לפני השליחה כדי לוודא שהכל נראה נכון, ואז שולחים מיד או מתזמנים לשעה מאוחרת יותר. כל השליחה מתבצעת מהמכשיר שלכם, לפי אישורכם — בלי העלאת רשימות לאינטרנט."
+        data-en="In practice: you bring a spreadsheet (Excel or CSV) with your columns (for example name, phone, amount, time), write the message text, review a clear preview before anything is sent, then send right away or pick a later time. Sending happens from your own device, only after you confirm — your list is not uploaded to the web."
       >
-        ניתן לשלב את כל סוגי הנתונים, בשימת לב ל[סוגריים] המרובעות לכותרות הרצויות. לדוגמה: שלום מר [שם]. נבקש להביא
-        לידעתך כי הסכום הרשום בחשבונך הינו סך [סכום] ש"ח נכון לתאריך [עוד].
+        בפועל זה פשוט: מייבאים לתוך האפליקציה קובץ אקסל או CSV עם העמודות שלכם (למשל שם, טלפון, סכום, שעה),
+        כותבים את נוסח ההודעה, רואים תצוגה לפני השליחה כדי לוודא שהכל נראה נכון, ואז שולחים מיד או מתזמנים לשעה
+        מאוחרת יותר. כל השליחה מתבצעת מהמכשיר שלכם, לפי אישורכם — בלי העלאת רשימות לאינטרנט.
       </p>
       <p
-        data-he="או לדוגמה: משפחת [שם] שלום וברכה. התור שלכם נקבע לשעה [עוד], דמי השתתפות עצמית סך [סכום] ש&quot;ח, וההודעה תשלח לכל הנמענים עם הפרטים המיועדים עבורם."
-        data-en="Another example: Hello [Name] family, your appointment is scheduled for [More], participation fee is [Amount] ILS, and each recipient receives a message with their own personal details."
+        data-he="בתוך ההודעה משתמשים בסוגריים מרובעים כדי לציין שם של עמודה מהקובץ. לדוגמה: &quot;שלום מר [שם], הסכום בחשבונך הוא [סכום] ש&quot;ח נכון ל-[עוד].&quot; האפליקציה תחליף כל [שם], [סכום] ו-[עוד] בערך המתאים לכל נמען."
+        data-en="Inside the message, use square brackets to name a column from your file. Example: &quot;Hello Mr. [Name], your balance is [Amount] ILS as of [More].&quot; The app replaces each [Name], [Amount], and [More] with the right value for each recipient."
       >
-        או לדוגמה: משפחת [שם] שלום וברכה. התור שלכם נקבע לשעה [עוד], דמי השתתפות עצמית סך [סכום] ש"ח, וההודעה תשלח
-        לכל הנמענים עם הפרטים המיועדים עבורם.
+        בתוך ההודעה משתמשים בסוגריים מרובעים כדי לציין שם של עמודה מהקובץ. לדוגמה: "שלום מר [שם], הסכום בחשבונך
+        הוא [סכום] ש"ח נכון ל-[עוד]." האפליקציה תחליף כל [שם], [סכום] ו-[עוד] בערך המתאים לכל נמען.
       </p>
+
+      <section class="screenshots" aria-labelledby="shots-title">
+        <h2 id="shots-title" class="section-title" data-he="תמונות מסך" data-en="Screenshots">תמונות מסך</h2>
+        <div class="screenshot-grid">
+          <figure class="shot" data-shot>
+            <img src="./screenshots/01-main.png" alt="" width="1080" height="1920" decoding="async" loading="lazy" />
+            <div
+              class="shot-fallback"
+              data-he="הוסיפו קובץ תמונה בשם 01-main.png בתיקיית screenshots."
+              data-en="Add an image file named 01-main.png in the screenshots folder."
+            ></div>
+            <figcaption
+              class="screenshot-cap"
+              data-he="מסך עבודה: בחירת קובץ, תבנית ההודעה ופעולות שליחה."
+              data-en="Main workflow: pick your file, write the template, and send."
+            >
+              מסך עבודה: בחירת קובץ, תבנית ההודעה ופעולות שליחה.
+            </figcaption>
+          </figure>
+          <figure class="shot" data-shot>
+            <img src="./screenshots/02-preview.png" alt="" width="1080" height="1920" decoding="async" loading="lazy" />
+            <div
+              class="shot-fallback"
+              data-he="הוסיפו קובץ תמונה בשם 02-preview.png בתיקיית screenshots."
+              data-en="Add an image file named 02-preview.png in the screenshots folder."
+            ></div>
+            <figcaption
+              class="screenshot-cap"
+              data-he="תצוגה לפני שליחה: ספירות, דוגמה לנמען ואזהרות עלות ספק."
+              data-en="Pre-send preview: counts, a sample recipient, and a carrier cost notice."
+            >
+              תצוגה לפני שליחה: ספירות, דוגמה לנמען ואזהרות עלות ספק.
+            </figcaption>
+          </figure>
+          <figure class="shot" data-shot>
+            <img src="./screenshots/03-templates.png" alt="" width="1080" height="1920" decoding="async" loading="lazy" />
+            <div
+              class="shot-fallback"
+              data-he="הוסיפו קובץ תמונה בשם 03-templates.png בתיקיית screenshots."
+              data-en="Add an image file named 03-templates.png in the screenshots folder."
+            ></div>
+            <figcaption
+              class="screenshot-cap"
+              data-he="תבניות שמורות ועזרה — חוסכים זמן בשימוש חוזר."
+              data-en="Saved templates and in-app help for faster repeat use."
+            >
+              תבניות שמורות ועזרה — חוסכים זמן בשימוש חוזר.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <h2 class="section-title" data-he="סרטונים" data-en="Videos">סרטונים</h2>
       <section class="videos">
         <video controls preload="metadata" src="./Video01-compressed.mp4"></video>
         <video controls preload="metadata" src="./Video02-compressed.mp4"></video>
       </section>
+
+      <p class="site-footer">
+        <span class="footer-lead" data-he="מופעל על ידי " data-en="Powered by "></span><a href="https://erlix.net/">erlix.net</a>
+      </p>
     </main>
     <script>
       const heBtn = document.getElementById("lang-he");
@@ -205,6 +354,14 @@
 
       heBtn.addEventListener("click", () => setLanguage("he"));
       enBtn.addEventListener("click", () => setLanguage("en"));
+      setLanguage("he");
+
+      document.querySelectorAll(".shot img").forEach((img) => {
+        const figure = img.closest(".shot");
+        const markMissing = () => figure.classList.add("missing-img");
+        if (img.complete && img.naturalWidth === 0) markMissing();
+        img.addEventListener("error", markMissing);
+      });
     </script>
   </body>
 </html>
