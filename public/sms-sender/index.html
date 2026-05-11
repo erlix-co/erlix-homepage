@@ -6,7 +6,7 @@
     <title>SMS Sender | Erlix</title>
     <meta
       name="description"
-      content="SMS Sender — שליחת SMS מותאמים אישית מרשימה (Excel או CSV), לשימוש ארגוני וקהילתי."
+      content="SMS Sender — שליחת SMS מותאמים אישית מ־Excel, CSV או גיליון מיוצא מ־Google Sheets. תצוגה מקדימה, תזמון, סינון לפי סכום, והגבלת מנות שליחה."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -123,11 +123,63 @@
         padding-bottom: 0.45rem;
       }
 
+      h3.card-title {
+        margin: 0 0 0.45rem;
+        font-size: 0.98rem;
+        font-weight: 600;
+        color: #cfe0ff;
+      }
+
       p {
         margin: 0.5rem 0;
         line-height: 1.85;
         color: #d7e5ff;
         font-size: clamp(1rem, 2vw, 1.08rem);
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem;
+        margin-top: 0.75rem;
+      }
+
+      .feature-card {
+        border-radius: 16px;
+        border: 1px solid rgba(95, 155, 255, 0.28);
+        background: rgba(6, 16, 40, 0.55);
+        padding: 1rem 1.1rem;
+      }
+
+      .feature-card p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: #c5d8f5;
+      }
+
+      .help-list {
+        margin: 0.5rem 0 0;
+        padding-inline-start: 1.35rem;
+        color: #d7e5ff;
+        font-size: clamp(0.95rem, 1.9vw, 1.05rem);
+        line-height: 1.75;
+      }
+
+      .help-list li {
+        margin: 0.55rem 0;
+      }
+
+      .help-sub {
+        margin-top: 1rem;
+        padding: 1rem 1.1rem;
+        border-radius: 14px;
+        background: rgba(25, 55, 110, 0.22);
+        border: 1px solid rgba(95, 155, 255, 0.2);
+      }
+
+      .help-sub p {
+        margin: 0.35rem 0 0;
       }
 
       .screenshots {
@@ -136,9 +188,15 @@
 
       .screenshot-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1.1rem;
         align-items: start;
+      }
+
+      @media (max-width: 640px) {
+        .screenshot-grid {
+          grid-template-columns: 1fr;
+        }
       }
 
       .shot {
@@ -149,6 +207,13 @@
         overflow: hidden;
         display: flex;
         flex-direction: column;
+      }
+
+      .shot--wide {
+        grid-column: 1 / -1;
+        max-width: min(440px, 100%);
+        margin-inline: auto;
+        width: 100%;
       }
 
       .shot img {
@@ -252,79 +317,248 @@
       </div>
       <h1 data-he="SMS Sender" data-en="SMS Sender">SMS Sender</h1>
       <p
-        data-he="SMS Sender היא אפליקציה לטלפון אנדרואיד, מיועדת לעמותות, בתי ספר, ארגונים וקהילות שרוצים לשלוח הודעות טקסט (SMS) לרשימת אנשים — כשלכל אחד מופיעים בפניו המילים והמספרים שמתאימים לו. אין צורך לכתוב הודעה נפרדת לכל אדם: כותבים פעם אחת תבנית, והאפליקציה ממלאת אוטומטית את הפרטים מקובץ הרשימה שלכם."
-        data-en="SMS Sender is an Android app for nonprofits, schools, organizations, and communities that need to send text messages (SMS) to a list of people — with each person seeing the words and numbers that apply to them. You do not write a separate message for every contact: you write one template, and the app fills in the details from your list file."
+        data-he="SMS Sender היא אפליקציה לאנדרואיד לעמותות, בתי ספר, ארגונים וקהילות: שולחים הודעות טקסט (SMS) לרשימה — וכל נמען רואה את הניסוח שלו עם השם, הסכום והשדות שמתאימים לו. כותבים פעם אחת תבנית, והאפליקציה ממלאת אותה אוטומטית לפי השורות בקובץ."
+        data-en="SMS Sender is an Android app for nonprofits, schools, organizations, and communities: you send SMS to a list, and each recipient sees their own wording — names, amounts, and fields pulled from your data. You write one template, and the app fills it automatically for every row."
       >
-        SMS Sender היא אפליקציה לטלפון אנדרואיד, מיועדת לעמותות, בתי ספר, ארגונים וקהילות שרוצים לשלוח הודעות
-        טקסט (SMS) לרשימת אנשים — כשלכל אחד מופיעים בפניו המילים והמספרים שמתאימים לו. אין צורך לכתוב הודעה נפרדת
-        לכל אדם: כותבים פעם אחת תבנית, והאפליקציה ממלאת אוטומטית את הפרטים מקובץ הרשימה שלכם.
+        SMS Sender היא אפליקציה לאנדרואיד לעמותות, בתי ספר, ארגונים וקהילות: שולחים הודעות טקסט (SMS) לרשימה — וכל נמען רואה את הניסוח שלו עם השם, הסכום והשדות שמתאימים לו. כותבים פעם אחת תבנית, והאפליקציה ממלאת אותה אוטומטית לפי השורות בקובץ.
       </p>
       <p
-        data-he="בפועל זה פשוט: מייבאים לתוך האפליקציה קובץ אקסל או CSV עם העמודות שלכם (למשל שם, טלפון, סכום, שעה), כותבים את נוסח ההודעה, רואים תצוגה לפני השליחה כדי לוודא שהכל נראה נכון, ואז שולחים מיד או מתזמנים לשעה מאוחרת יותר. כל השליחה מתבצעת מהמכשיר שלכם, לפי אישורכם — בלי העלאת רשימות לאינטרנט."
-        data-en="In practice: you bring a spreadsheet (Excel or CSV) with your columns (for example name, phone, amount, time), write the message text, review a clear preview before anything is sent, then send right away or pick a later time. Sending happens from your own device, only after you confirm — your list is not uploaded to the web."
+        data-he="מייבאים קובץ אקסל ‎(.xlsx)‎ או CSV מהמכשיר, כותבים הודעה עם שמות עמודות בסוגריים מרובעים (למשל [שם], [טלפון]), בודקים תצוגה מקדימה לפני שליחה, ואז שולחים מיד או מתזמנים. השליחה מתבצעת מהטלפון שלכם ולפי אישורכם — הרשימה לא מועלית לשרת שלנו."
+        data-en="You import an Excel (.xlsx) or CSV file from your device, write a message using column names in square brackets (for example [name], [phone]), review a preview before sending, then send immediately or schedule. Delivery runs from your phone with your approval — your list is not uploaded to our servers."
       >
-        בפועל זה פשוט: מייבאים לתוך האפליקציה קובץ אקסל או CSV עם העמודות שלכם (למשל שם, טלפון, סכום, שעה),
-        כותבים את נוסח ההודעה, רואים תצוגה לפני השליחה כדי לוודא שהכל נראה נכון, ואז שולחים מיד או מתזמנים לשעה
-        מאוחרת יותר. כל השליחה מתבצעת מהמכשיר שלכם, לפי אישורכם — בלי העלאת רשימות לאינטרנט.
+        מייבאים קובץ אקסל ‎(.xlsx)‎ או CSV מהמכשיר, כותבים הודעה עם שמות עמודות בסוגריים מרובעים (למשל [שם], [טלפון]), בודקים תצוגה מקדימה לפני שליחה, ואז שולחים מיד או מתזמנים. השליחה מתבצעת מהטלפון שלכם ולפי אישורכם — הרשימה לא מועלית לשרת שלנו.
       </p>
       <p
-        data-he="בתוך ההודעה משתמשים בסוגריים מרובעים כדי לציין שם של עמודה מהקובץ. לדוגמה: &quot;שלום מר [שם], הסכום בחשבונך הוא [סכום] ש&quot;ח נכון ל-[עוד].&quot; האפליקציה תחליף כל [שם], [סכום] ו-[עוד] בערך המתאים לכל נמען."
-        data-en="Inside the message, use square brackets to name a column from your file. Example: &quot;Hello Mr. [Name], your balance is [Amount] ILS as of [More].&quot; The app replaces each [Name], [Amount], and [More] with the right value for each recipient."
+        data-he="דוגמה לתבנית: &quot;לכבוד משפחת [שם], כתובת: [כתובת] — מוזמנים לפגישה בשעה [שעה] בחדר [חדר]. דמי השתתפות: [סכום] ₪.&quot; השמות בסוגריים חייבים להתאים לכותרות העמודות בקובץ."
+        data-en="Example template: &quot;Dear [Name] family, address: [Address] — you are invited at [Time], room [Room]. Fee: [Amount] ILS.&quot; The names in brackets must match your file’s column headers."
       >
-        בתוך ההודעה משתמשים בסוגריים מרובעים כדי לציין שם של עמודה מהקובץ. לדוגמה: "שלום מר [שם], הסכום בחשבונך
-        הוא [סכום] ש"ח נכון ל-[עוד]." האפליקציה תחליף כל [שם], [סכום] ו-[עוד] בערך המתאים לכל נמען.
+        דוגמה לתבנית: "לכבוד משפחת [שם], כתובת: [כתובת] — מוזמנים לפגישה בשעה [שעה] בחדר [חדר]. דמי השתתפות: [סכום] ₪." השמות בסוגריים חייבים להתאים לכותרות העמודות בקובץ.
       </p>
 
+      <h2 class="section-title" data-he="תכונות שימושיות" data-en="Highlights">תכונות שימושיות</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3 class="card-title" data-he="גיליונות מ־Google Sheets" data-en="Google Sheets">גיליונות מ־Google Sheets</h3>
+          <p
+            data-he="ניתן להכין את הרשימה ב־Google Sheets, ואז לייצא מהתפריט קובץ Excel ‎(.xlsx)‎ או CSV ולשמור אותו בטלפון. באפליקציה בוחרים &quot;בחר קובץ&quot; ופותחים את הקובץ — אין חיבור ישיר לחשבון Google; הכל עובד דרך הקובץ שמגיע למכשיר."
+            data-en="Prepare your list in Google Sheets, then use Download or File → Download and pick Microsoft Excel (.xlsx) or CSV, and save the file on your phone. In the app, tap Choose file and open it — there is no direct link to Google; everything goes through the file on your device."
+          >
+            ניתן להכין את הרשימה ב־Google Sheets, ואז לייצא מהתפריט קובץ Excel ‎(.xlsx)‎ או CSV ולשמור אותו בטלפון. באפליקציה בוחרים "בחר קובץ" ופותחים את הקובץ — אין חיבור ישיר לחשבון Google; הכל עובד דרך הקובץ שמגיע למכשיר.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title" data-he="מקסימום הודעות לכל שליחה" data-en="Max messages per batch">מקסימום הודעות לכל שליחה</h3>
+          <p
+            data-he="אפשר להגביל כמה הודעות נשלחות ברצף לפני עצירה לאישור הבא. אחרי כל מנה מוצגת בקשה להמשיך — מתאים לשליטה בעלויות ובקצב. האפשרות פעילה בשליחה מיידית בלבד; בשליחה מתוזמנת אין מגבלת מנות. אם משאירים את השדה ריק, אפשר לבחור שליחה ללא הגבלה רק אחרי אזהרה ברורה באפליקציה. מומלץ להשאיר את חלון האפליקציה פתוח עד סיום השליחה."
+            data-en="You can cap how many messages go out in one stretch before the app pauses and asks you to continue — helpful for cost and pace control. This applies to immediate sending only; scheduled sending has no per-batch cap. If the field is left empty, unlimited sending is available only after an explicit in‑app warning. Keep the app open until sending finishes."
+          >
+            אפשר להגביל כמה הודעות נשלחות ברצף לפני עצירה לאישור הבא. אחרי כל מנה מוצגת בקשה להמשיך — מתאים לשליטה בעלויות ובקצב. האפשרות פעילה בשליחה מיידית בלבד; בשליחה מתוזמנת אין מגבלת מנות. אם משאירים את השדה ריק, אפשר לבחור שליחה ללא הגבלה רק אחרי אזהרה ברורה באפליקציה. מומלץ להשאיר את חלון האפליקציה פתוח עד סיום השליחה.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title" data-he="סינון לפי סכום" data-en="Amount filter">סינון לפי סכום</h3>
+          <p
+            data-he="כשבקובץ יש עמודת סכומים, אפשר להגדיר סכום מינימום: שורות עם סכום נמוך מהסף לא יישלחו. מתאים למצבים שבהם רוצים לשלוח רק למי שעומד בתנאי סכום מסוים."
+            data-en="When your file includes amounts, you can set a minimum: rows below that value are skipped. Useful when only contacts above a certain amount should receive a message."
+          >
+            כשבקובץ יש עמודת סכומים, אפשר להגדיר סכום מינימום: שורות עם סכום נמוך מהסף לא יישלחו. מתאים למצבים שבהם רוצים לשלוח רק למי שעומד בתנאי סכום מסוים.
+          </p>
+        </div>
+      </div>
+
       <section class="screenshots" aria-labelledby="shots-title">
-        <h2 id="shots-title" class="section-title" data-he="תמונות מסך" data-en="Screenshots">תמונות מסך</h2>
+        <h2 id="shots-title" class="section-title" data-he="תמונות מסך מהאפליקציה" data-en="Screenshots from the app">תמונות מסך מהאפליקציה</h2>
         <div class="screenshot-grid">
           <figure class="shot" data-shot>
-            <img src="./screenshots/01-main.png" alt="" width="1080" height="1920" decoding="async" loading="lazy" />
+            <img src="./screenshots/01-main.jpg" alt="" width="1080" height="2400" decoding="async" loading="lazy" />
             <div
               class="shot-fallback"
-              data-he="הוסיפו קובץ תמונה בשם 01-main.png בתיקיית screenshots."
-              data-en="Add an image file named 01-main.png in the screenshots folder."
+              data-he="חסר קובץ תמונה: screenshots/01-main.jpg"
+              data-en="Missing image: screenshots/01-main.jpg"
             ></div>
             <figcaption
               class="screenshot-cap"
-              data-he="מסך עבודה: בחירת קובץ, תבנית ההודעה ופעולות שליחה."
-              data-en="Main workflow: pick your file, write the template, and send."
+              data-he="מסך ראשי: תבנית הודעה עם שדות דינמיים, שדות &quot;מקסימום הודעות&quot; ו&quot;סינון לפי סכום&quot; (עם עזרה ?), כפתורי תבניות, בחירת קובץ, עזרה, תזמון, לוג ושליחה."
+              data-en="Main screen: message template with placeholders, “Maximum messages” and “Filter by amount” (with ? help), plus Templates, Choose file, Help, Schedule, Log, and Send."
             >
-              מסך עבודה: בחירת קובץ, תבנית ההודעה ופעולות שליחה.
+              מסך ראשי: תבנית הודעה עם שדות דינמיים, שדות "מקסימום הודעות" ו"סינון לפי סכום" (עם עזרה ?), כפתורי תבניות, בחירת קובץ, עזרה, תזמון, לוג ושליחה.
             </figcaption>
           </figure>
           <figure class="shot" data-shot>
-            <img src="./screenshots/02-preview.png" alt="" width="1080" height="1920" decoding="async" loading="lazy" />
+            <img src="./screenshots/02-preview.jpg" alt="" width="1080" height="2400" decoding="async" loading="lazy" />
             <div
               class="shot-fallback"
-              data-he="הוסיפו קובץ תמונה בשם 02-preview.png בתיקיית screenshots."
-              data-en="Add an image file named 02-preview.png in the screenshots folder."
+              data-he="חסר קובץ תמונה: screenshots/02-preview.jpg"
+              data-en="Missing image: screenshots/02-preview.jpg"
             ></div>
             <figcaption
               class="screenshot-cap"
-              data-he="תצוגה לפני שליחה: ספירות, דוגמה לנמען ואזהרות עלות ספק."
-              data-en="Pre-send preview: counts, a sample recipient, and a carrier cost notice."
+              data-he="אישור לפני שליחה: דוגמה להודעה הראשונה אחרי מילוי השדות, מספר מוכנים לשליחה, ופירוט דילוגים (תאים ריקים, ללא טלפון, סף סכום) ואזהרה על חיוב מול המפעיל."
+              data-en="Pre-send confirmation: first filled-in message, how many are ready to send, skipped rows (empty cells, missing phone, amount threshold), and a carrier cost notice."
             >
-              תצוגה לפני שליחה: ספירות, דוגמה לנמען ואזהרות עלות ספק.
+              אישור לפני שליחה: דוגמה להודעה הראשונה אחרי מילוי השדות, מספר מוכנים לשליחה, ופירוט דילוגים (תאים ריקים, ללא טלפון, סף סכום) ואזהרה על חיוב מול המפעיל.
             </figcaption>
           </figure>
           <figure class="shot" data-shot>
-            <img src="./screenshots/03-templates.png" alt="" width="1080" height="1920" decoding="async" loading="lazy" />
+            <img src="./screenshots/03-schedule.jpg" alt="" width="1080" height="2400" decoding="async" loading="lazy" />
             <div
               class="shot-fallback"
-              data-he="הוסיפו קובץ תמונה בשם 03-templates.png בתיקיית screenshots."
-              data-en="Add an image file named 03-templates.png in the screenshots folder."
+              data-he="חסר קובץ תמונה: screenshots/03-schedule.jpg"
+              data-en="Missing image: screenshots/03-schedule.jpg"
             ></div>
             <figcaption
               class="screenshot-cap"
-              data-he="תבניות שמורות ועזרה — חוסכים זמן בשימוש חוזר."
-              data-en="Saved templates and in-app help for faster repeat use."
+              data-he="תזמון שליחה: בחירת תאריך בלוח שנה לפני שליחה אוטומטית בזמן שנקבע."
+              data-en="Scheduling: pick a send date in the calendar for automatic delivery at the chosen time."
             >
-              תבניות שמורות ועזרה — חוסכים זמן בשימוש חוזר.
+              תזמון שליחה: בחירת תאריך בלוח שנה לפני שליחה אוטומטית בזמן שנקבע.
+            </figcaption>
+          </figure>
+          <figure class="shot" data-shot>
+            <img src="./screenshots/04-templates.jpg" alt="" width="1080" height="2400" decoding="async" loading="lazy" />
+            <div
+              class="shot-fallback"
+              data-he="חסר קובץ תמונה: screenshots/04-templates.jpg"
+              data-en="Missing image: screenshots/04-templates.jpg"
+            ></div>
+            <figcaption
+              class="screenshot-cap"
+              data-he="חלון תבניות: שמירה וטעינה מהירה של ניסוחים חוזרים."
+              data-en="Templates dialog: save and reload wording you use often."
+            >
+              חלון תבניות: שמירה וטעינה מהירה של ניסוחים חוזרים.
+            </figcaption>
+          </figure>
+          <figure class="shot" data-shot>
+            <img src="./screenshots/05-delivery-log.jpg" alt="" width="1080" height="2400" decoding="async" loading="lazy" />
+            <div
+              class="shot-fallback"
+              data-he="חסר קובץ תמונה: screenshots/05-delivery-log.jpg"
+              data-en="Missing image: screenshots/05-delivery-log.jpg"
+            ></div>
+            <figcaption
+              class="screenshot-cap"
+              data-he="לוג שליחה: סיכום נשלחו/נכשלו, פירוט טכני, ורשימת סטטוס לכל הודעה (כולל דילוג בשל תא ריק)."
+              data-en="Delivery log: sent/failed totals, a technical summary line, and per-message status (including skips for empty cells)."
+            >
+              לוג שליחה: סיכום נשלחו/נכשלו, פירוט טכני, ורשימת סטטוס לכל הודעה (כולל דילוג בשל תא ריק).
+            </figcaption>
+          </figure>
+          <figure class="shot" data-shot>
+            <img src="./screenshots/06-unlimited-warning.jpg" alt="" width="1080" height="2400" decoding="async" loading="lazy" />
+            <div
+              class="shot-fallback"
+              data-he="חסר קובץ תמונה: screenshots/06-unlimited-warning.jpg"
+              data-en="Missing image: screenshots/06-unlimited-warning.jpg"
+            ></div>
+            <figcaption
+              class="screenshot-cap"
+              data-he="אזהרה לפני שליחה ללא הגבלה: תזכורת על עלויות אפשריות מול המפעיל כשלא מגדירים מקסימום הודעות."
+              data-en="Unlimited-send warning: reminds you about possible carrier charges when no message cap is set."
+            >
+              אזהרה לפני שליחה ללא הגבלה: תזכורת על עלויות אפשריות מול המפעיל כשלא מגדירים מקסימום הודעות.
+            </figcaption>
+          </figure>
+          <figure class="shot shot--wide" data-shot>
+            <img src="./screenshots/07-messages-result.jpg" alt="" width="1080" height="2400" decoding="async" loading="lazy" />
+            <div
+              class="shot-fallback"
+              data-he="חסר קובץ תמונה: screenshots/07-messages-result.jpg"
+              data-en="Missing image: screenshots/07-messages-result.jpg"
+            ></div>
+            <figcaption
+              class="screenshot-cap"
+              data-he="כך נראות ההודעות אצל הנמענים: אותה תבנית, פרטים שונים לכל משפחה (שם, כתובת, שעה, חדר, סכום)."
+              data-en="What recipients see: one template, personalized details for each family (name, address, time, room, amount)."
+            >
+              כך נראות ההודעות אצל הנמענים: אותה תבנית, פרטים שונים לכל משפחה (שם, כתובת, שעה, חדר, סכום).
             </figcaption>
           </figure>
         </div>
       </section>
+
+      <h2 class="section-title" data-he="מידע מהעזרה באפליקציה" data-en="From the in-app help">מידע מהעזרה באפליקציה</h2>
+      <p
+        data-he="להלן תקציר של תוכן חלון העזרה ושל הסברים ליד השדות — מותאם לפרסום באתר."
+        data-en="Below is a summary of the Help dialog and field hints — edited for the website."
+      >
+        להלן תקציר של תוכן חלון העזרה ושל הסברים ליד השדות — מותאם לפרסום באתר.
+      </p>
+      <ol class="help-list">
+        <li
+          data-he="האפליקציה תומכת בקבצי CSV ו־XLSX. חלון בחירת הקבצים מסונן לסוגים האלה."
+          data-en="The app supports CSV and XLSX files. The file picker is filtered to these formats."
+        >
+          האפליקציה תומכת בקבצי CSV ו־XLSX. חלון בחירת הקבצים מסונן לסוגים האלה.
+        </li>
+        <li
+          data-he="בכל הודעה, טקסט בסוגריים מרובעים (למשל [שם], [סכום]) מתמלא אוטומטית לפי כותרת עמודה תואמת בקובץ."
+          data-en="In each message, text in square brackets (for example [name], [amount]) is filled from the matching column header in your file."
+        >
+          בכל הודעה, טקסט בסוגריים מרובעים (למשל [שם], [סכום]) מתמלא אוטומטית לפי כותרת עמודה תואמת בקובץ.
+        </li>
+        <li
+          data-he="לשליחה חייבת להיות עמודת טלפון (למשל: טלפון או phone)."
+          data-en="Sending requires a phone column (for example phone or טלפון)."
+        >
+          לשליחה חייבת להיות עמודת טלפון (למשל: טלפון או phone).
+        </li>
+        <li
+          data-he="לפני שליחה מוצגת תצוגה מקדימה: ההודעה הראשונה, כמה מוכנים לשליחה, כמה דולגו (תאים ריקים, ללא טלפון, סף סכום), ואזהרה על עלויות אפשריות מול מפעיל הסלולר."
+          data-en="Before sending you see a preview: the first message, how many are ready, how many were skipped (empty cells, missing phone, amount threshold), and a notice about possible carrier charges."
+        >
+          לפני שליחה מוצגת תצוגה מקדימה: ההודעה הראשונה, כמה מוכנים לשליחה, כמה דולגו (תאים ריקים, ללא טלפון, סף סכום), ואזהרה על עלויות אפשריות מול מפעיל הסלולר.
+        </li>
+        <li
+          data-he="אפשר להגדיר מקסימום הודעות לכל אישור: האפליקציה נעצרת ומבקשת אישור לפני כל מנה נוספת. רלוונטי לשליחה מיידית בלבד; בשליחה מתוזמנת אין מגבלת מנות. מומלץ להשאיר את חלון האפליקציה פתוח עד סיום השליחה."
+          data-en="You can set a maximum number of messages per approval: the app pauses and asks before each next batch. This applies to immediate sending only, not scheduled sending. Keep the app open until sending completes."
+        >
+          אפשר להגדיר מקסימום הודעות לכל אישור: האפליקציה נעצרת ומבקשת אישור לפני כל מנה נוספת. רלוונטי לשליחה מיידית בלבד; בשליחה מתוזמנת אין מגבלת מנות. מומלץ להשאיר את חלון האפליקציה פתוח עד סיום השליחה.
+        </li>
+        <li
+          data-he="אם השדה נשאר ריק, אפשר לבחור שליחה ללא הגבלה רק אחרי אזהרה ברורה באפליקציה."
+          data-en="If the max field is left empty, unlimited sending is available only after a clear in-app warning."
+        >
+          אם השדה נשאר ריק, אפשר לבחור שליחה ללא הגבלה רק אחרי אזהרה ברורה באפליקציה.
+        </li>
+        <li
+          data-he="במצב תזמון, כל ההודעות המוכנות נשלחות אוטומטית בזמן שנבחר — בלי אישור נוסף באותו רגע, וללא מגבלת מנות. לפני התזמון האפליקציה מציגה אזהרה מתאימה."
+          data-en="In scheduled mode, all ready messages are sent automatically at the chosen time — without another confirmation at send time, and without per-batch limits. The app shows a warning before you confirm scheduling."
+        >
+          במצב תזמון, כל ההודעות המוכנות נשלחות אוטומטית בזמן שנבחר — בלי אישור נוסף באותו רגע, וללא מגבלת מנות. לפני התזמון האפליקציה מציגה אזהרה מתאימה.
+        </li>
+        <li
+          data-he="ניתן לצפות בלוג שליחה ולאפס מונים ותבניות שמורות במכשיר לפי הצורך."
+          data-en="You can open the delivery log and reset counters or saved templates on the device when needed."
+        >
+          ניתן לצפות בלוג שליחה ולאפס מונים ותבניות שמורות במכשיר לפי הצורך.
+        </li>
+        <li
+          data-he="גיליון מ־Google Sheets: הכינו את הרשימה ב־Sheets, ייצאו כ־Excel או CSV והעבירו לטלפון, ואז בחרו את הקובץ באפליקציה."
+          data-en="From Google Sheets: build the list in Sheets, export as Excel or CSV to your phone, then choose that file in the app."
+        >
+          גיליון מ־Google Sheets: הכינו את הרשימה ב־Sheets, ייצאו כ־Excel או CSV והעבירו לטלפון, ואז בחרו את הקובץ באפליקציה.
+        </li>
+      </ol>
+
+      <div class="help-sub">
+        <h3 class="card-title" data-he="סינון לפי סכום (מהעזרה ליד השדה)" data-en="Amount filter (from the ? hint)">סינון לפי סכום (מהעזרה ליד השדה)</h3>
+        <p
+          data-he="כאשר בקובץ יש סכומים שונים, ניתן להגדיר סכום מינימום. הודעות עבור שורות עם סכום נמוך מהסף לא יישלחו."
+          data-en="If your file contains different amounts, you can set a minimum amount. Messages for rows below this amount will be skipped."
+        >
+          כאשר בקובץ יש סכומים שונים, ניתן להגדיר סכום מינימום. הודעות עבור שורות עם סכום נמוך מהסף לא יישלחו.
+        </p>
+      </div>
+      <div class="help-sub">
+        <h3 class="card-title" data-he="מקסימום הודעות (מהעזרה ליד השדה)" data-en="Maximum messages (from the ? hint)">מקסימום הודעות (מהעזרה ליד השדה)</h3>
+        <p
+          data-he="הגבלת כמות ההודעות הנשלחות. לאחר שליחת הכמות שנבחרה, יש לאשר המשך שליחה. האפשרות פעילה רק בשליחה מיידית, ולא בשליחה מתוזמנת. חלון האפליקציה חייב להיות פתוח עד לסיום השליחה."
+          data-en="Limits how many messages are sent. After the chosen count is sent, you must confirm to continue. This option applies only to immediate sending, not scheduled sending. The app window should stay open until sending finishes."
+        >
+          הגבלת כמות ההודעות הנשלחות. לאחר שליחת הכמות שנבחרה, יש לאשר המשך שליחה. האפשרות פעילה רק בשליחה מיידית, ולא בשליחה מתוזמנת. חלון האפליקציה חייב להיות פתוח עד לסיום השליחה.
+        </p>
+      </div>
 
       <h2 class="section-title" data-he="סרטונים" data-en="Videos">סרטונים</h2>
       <section class="videos">
