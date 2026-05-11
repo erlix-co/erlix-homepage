@@ -158,30 +158,6 @@
         color: #c5d8f5;
       }
 
-      .help-list {
-        margin: 0.5rem 0 0;
-        padding-inline-start: 1.35rem;
-        color: #d7e5ff;
-        font-size: clamp(0.95rem, 1.9vw, 1.05rem);
-        line-height: 1.75;
-      }
-
-      .help-list li {
-        margin: 0.55rem 0;
-      }
-
-      .help-sub {
-        margin-top: 1rem;
-        padding: 1rem 1.1rem;
-        border-radius: 14px;
-        background: rgba(25, 55, 110, 0.22);
-        border: 1px solid rgba(95, 155, 255, 0.2);
-      }
-
-      .help-sub p {
-        margin: 0.35rem 0 0;
-      }
-
       .screenshots {
         margin-top: 0.5rem;
       }
@@ -211,17 +187,24 @@
 
       .shot--wide {
         grid-column: 1 / -1;
-        max-width: min(440px, 100%);
+        max-width: min(220px, 42vw);
         margin-inline: auto;
         width: 100%;
       }
 
       .shot img {
-        width: 100%;
+        width: 50%;
+        max-width: min(240px, 42vw);
         height: auto;
+        margin-inline: auto;
         vertical-align: middle;
         display: block;
         background: #0a1428;
+      }
+
+      .shot--wide img {
+        width: 100%;
+        max-width: none;
       }
 
       .shot figcaption {
@@ -249,21 +232,6 @@
 
       .shot.missing-img .shot-fallback {
         display: grid;
-      }
-
-      .videos {
-        margin-top: 1.2rem;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 1rem;
-      }
-
-      video {
-        width: min(100%, 180px);
-        justify-self: center;
-        border-radius: 16px;
-        border: 1px solid rgba(95, 155, 255, 0.35);
-        background: #000;
       }
 
       .site-footer {
@@ -340,10 +308,10 @@
         <div class="feature-card">
           <h3 class="card-title" data-he="גיליונות מ־Google Sheets" data-en="Google Sheets">גיליונות מ־Google Sheets</h3>
           <p
-            data-he="ניתן להכין את הרשימה ב־Google Sheets, ואז לייצא מהתפריט קובץ Excel ‎(.xlsx)‎ או CSV ולשמור אותו בטלפון. באפליקציה בוחרים &quot;בחר קובץ&quot; ופותחים את הקובץ — אין חיבור ישיר לחשבון Google; הכל עובד דרך הקובץ שמגיע למכשיר."
-            data-en="Prepare your list in Google Sheets, then use Download or File → Download and pick Microsoft Excel (.xlsx) or CSV, and save the file on your phone. In the app, tap Choose file and open it — there is no direct link to Google; everything goes through the file on your device."
+            data-he="ניתן להכין את הרשימה ב־Google Sheets. לאחר מכן אפשר לייצא מתפריט הקובץ ב־Sheets (הורדה כ־Microsoft Excel ‎(.xlsx)‎ או CSV), או לפתוח את אותו גיליון ב־Google Drive ולהוריד ממנו קובץ אקסל ישירות למכשיר. באפליקציה בוחרים &quot;בחר קובץ&quot; ופותחים את הקובץ — אין חיבור ישיר לחשבון Google; הכל עובד דרך הקובץ השמור במכשיר."
+            data-en="Build your list in Google Sheets. Then either export from the Sheets File menu (Download as Microsoft Excel .xlsx or CSV), or open the same spreadsheet in Google Drive and download an Excel file straight to your device. In the app, tap Choose file — there is no direct Google sign-in; everything uses the file stored on your phone."
           >
-            ניתן להכין את הרשימה ב־Google Sheets, ואז לייצא מהתפריט קובץ Excel ‎(.xlsx)‎ או CSV ולשמור אותו בטלפון. באפליקציה בוחרים "בחר קובץ" ופותחים את הקובץ — אין חיבור ישיר לחשבון Google; הכל עובד דרך הקובץ שמגיע למכשיר.
+            ניתן להכין את הרשימה ב־Google Sheets. לאחר מכן אפשר לייצא מתפריט הקובץ ב־Sheets (הורדה כ־Microsoft Excel ‎(.xlsx)‎ או CSV), או לפתוח את אותו גיליון ב־Google Drive ולהוריד ממנו קובץ אקסל ישירות למכשיר. באפליקציה בוחרים "בחר קובץ" ופותחים את הקובץ — אין חיבור ישיר לחשבון Google; הכל עובד דרך הקובץ השמור במכשיר.
           </p>
         </div>
         <div class="feature-card">
@@ -475,95 +443,6 @@
             </figcaption>
           </figure>
         </div>
-      </section>
-
-      <h2 class="section-title" data-he="מידע מהעזרה באפליקציה" data-en="From the in-app help">מידע מהעזרה באפליקציה</h2>
-      <p
-        data-he="להלן תקציר של תוכן חלון העזרה ושל הסברים ליד השדות — מותאם לפרסום באתר."
-        data-en="Below is a summary of the Help dialog and field hints — edited for the website."
-      >
-        להלן תקציר של תוכן חלון העזרה ושל הסברים ליד השדות — מותאם לפרסום באתר.
-      </p>
-      <ol class="help-list">
-        <li
-          data-he="האפליקציה תומכת בקבצי CSV ו־XLSX. חלון בחירת הקבצים מסונן לסוגים האלה."
-          data-en="The app supports CSV and XLSX files. The file picker is filtered to these formats."
-        >
-          האפליקציה תומכת בקבצי CSV ו־XLSX. חלון בחירת הקבצים מסונן לסוגים האלה.
-        </li>
-        <li
-          data-he="בכל הודעה, טקסט בסוגריים מרובעים (למשל [שם], [סכום]) מתמלא אוטומטית לפי כותרת עמודה תואמת בקובץ."
-          data-en="In each message, text in square brackets (for example [name], [amount]) is filled from the matching column header in your file."
-        >
-          בכל הודעה, טקסט בסוגריים מרובעים (למשל [שם], [סכום]) מתמלא אוטומטית לפי כותרת עמודה תואמת בקובץ.
-        </li>
-        <li
-          data-he="לשליחה חייבת להיות עמודת טלפון (למשל: טלפון או phone)."
-          data-en="Sending requires a phone column (for example phone or טלפון)."
-        >
-          לשליחה חייבת להיות עמודת טלפון (למשל: טלפון או phone).
-        </li>
-        <li
-          data-he="לפני שליחה מוצגת תצוגה מקדימה: ההודעה הראשונה, כמה מוכנים לשליחה, כמה דולגו (תאים ריקים, ללא טלפון, סף סכום), ואזהרה על עלויות אפשריות מול מפעיל הסלולר."
-          data-en="Before sending you see a preview: the first message, how many are ready, how many were skipped (empty cells, missing phone, amount threshold), and a notice about possible carrier charges."
-        >
-          לפני שליחה מוצגת תצוגה מקדימה: ההודעה הראשונה, כמה מוכנים לשליחה, כמה דולגו (תאים ריקים, ללא טלפון, סף סכום), ואזהרה על עלויות אפשריות מול מפעיל הסלולר.
-        </li>
-        <li
-          data-he="אפשר להגדיר מקסימום הודעות לכל אישור: האפליקציה נעצרת ומבקשת אישור לפני כל מנה נוספת. רלוונטי לשליחה מיידית בלבד; בשליחה מתוזמנת אין מגבלת מנות. מומלץ להשאיר את חלון האפליקציה פתוח עד סיום השליחה."
-          data-en="You can set a maximum number of messages per approval: the app pauses and asks before each next batch. This applies to immediate sending only, not scheduled sending. Keep the app open until sending completes."
-        >
-          אפשר להגדיר מקסימום הודעות לכל אישור: האפליקציה נעצרת ומבקשת אישור לפני כל מנה נוספת. רלוונטי לשליחה מיידית בלבד; בשליחה מתוזמנת אין מגבלת מנות. מומלץ להשאיר את חלון האפליקציה פתוח עד סיום השליחה.
-        </li>
-        <li
-          data-he="אם השדה נשאר ריק, אפשר לבחור שליחה ללא הגבלה רק אחרי אזהרה ברורה באפליקציה."
-          data-en="If the max field is left empty, unlimited sending is available only after a clear in-app warning."
-        >
-          אם השדה נשאר ריק, אפשר לבחור שליחה ללא הגבלה רק אחרי אזהרה ברורה באפליקציה.
-        </li>
-        <li
-          data-he="במצב תזמון, כל ההודעות המוכנות נשלחות אוטומטית בזמן שנבחר — בלי אישור נוסף באותו רגע, וללא מגבלת מנות. לפני התזמון האפליקציה מציגה אזהרה מתאימה."
-          data-en="In scheduled mode, all ready messages are sent automatically at the chosen time — without another confirmation at send time, and without per-batch limits. The app shows a warning before you confirm scheduling."
-        >
-          במצב תזמון, כל ההודעות המוכנות נשלחות אוטומטית בזמן שנבחר — בלי אישור נוסף באותו רגע, וללא מגבלת מנות. לפני התזמון האפליקציה מציגה אזהרה מתאימה.
-        </li>
-        <li
-          data-he="ניתן לצפות בלוג שליחה ולאפס מונים ותבניות שמורות במכשיר לפי הצורך."
-          data-en="You can open the delivery log and reset counters or saved templates on the device when needed."
-        >
-          ניתן לצפות בלוג שליחה ולאפס מונים ותבניות שמורות במכשיר לפי הצורך.
-        </li>
-        <li
-          data-he="גיליון מ־Google Sheets: הכינו את הרשימה ב־Sheets, ייצאו כ־Excel או CSV והעבירו לטלפון, ואז בחרו את הקובץ באפליקציה."
-          data-en="From Google Sheets: build the list in Sheets, export as Excel or CSV to your phone, then choose that file in the app."
-        >
-          גיליון מ־Google Sheets: הכינו את הרשימה ב־Sheets, ייצאו כ־Excel או CSV והעבירו לטלפון, ואז בחרו את הקובץ באפליקציה.
-        </li>
-      </ol>
-
-      <div class="help-sub">
-        <h3 class="card-title" data-he="סינון לפי סכום (מהעזרה ליד השדה)" data-en="Amount filter (from the ? hint)">סינון לפי סכום (מהעזרה ליד השדה)</h3>
-        <p
-          data-he="כאשר בקובץ יש סכומים שונים, ניתן להגדיר סכום מינימום. הודעות עבור שורות עם סכום נמוך מהסף לא יישלחו."
-          data-en="If your file contains different amounts, you can set a minimum amount. Messages for rows below this amount will be skipped."
-        >
-          כאשר בקובץ יש סכומים שונים, ניתן להגדיר סכום מינימום. הודעות עבור שורות עם סכום נמוך מהסף לא יישלחו.
-        </p>
-      </div>
-      <div class="help-sub">
-        <h3 class="card-title" data-he="מקסימום הודעות (מהעזרה ליד השדה)" data-en="Maximum messages (from the ? hint)">מקסימום הודעות (מהעזרה ליד השדה)</h3>
-        <p
-          data-he="הגבלת כמות ההודעות הנשלחות. לאחר שליחת הכמות שנבחרה, יש לאשר המשך שליחה. האפשרות פעילה רק בשליחה מיידית, ולא בשליחה מתוזמנת. חלון האפליקציה חייב להיות פתוח עד לסיום השליחה."
-          data-en="Limits how many messages are sent. After the chosen count is sent, you must confirm to continue. This option applies only to immediate sending, not scheduled sending. The app window should stay open until sending finishes."
-        >
-          הגבלת כמות ההודעות הנשלחות. לאחר שליחת הכמות שנבחרה, יש לאשר המשך שליחה. האפשרות פעילה רק בשליחה מיידית, ולא בשליחה מתוזמנת. חלון האפליקציה חייב להיות פתוח עד לסיום השליחה.
-        </p>
-      </div>
-
-      <h2 class="section-title" data-he="סרטונים" data-en="Videos">סרטונים</h2>
-      <section class="videos">
-        <video controls preload="metadata" src="./Video01-compressed.mp4"></video>
-        <video controls preload="metadata" src="./Video02-compressed.mp4"></video>
       </section>
 
       <p class="site-footer">
