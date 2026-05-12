@@ -29,9 +29,9 @@ export const homeContent = {
       "כלי שימנע מכם לשלוח בטעות הודעת אימייל למספר אנשי קשר בצורה גלויה. הכלי בבדיקות אצל קבוצת בדיקה לקראת השקה",
     projectSoonCta: "כנס",
     project03Tag: "בשימוש",
-    project03Title: "Project 03",
+    project03Title: "Community SMS",
     project03Text:
-      "אפליקציה לשליחה אוטומטית של הודעות SMS למספר רחב של נמענים, עם נתונים אישיים לכל נמען. לדוגמה: יתרת חובה של לקוחות, שעת פגישה למוזמנים לפי שעות וכדו'.",
+      "אפליקציית Community SMS לשליחת הודעות SMS מותאמות אישית לרשימה, עם נתונים שונים לכל נמען — לדוגמה יתרת חובה, שעת פגישה ועוד. מיועדת לתקשורת ארגונית, קהילתית ובית ספרית.",
     project03Cta: "כנס",
     project04Tag: "בפיתוח",
     project04Title: "Project 04",
@@ -69,9 +69,9 @@ export const homeContent = {
       "New project in development: a tool that prevents accidentally sending visible group emails to multiple contacts.",
     projectSoonCta: "Enter",
     project03Tag: "In Use",
-    project03Title: "Project 03",
+    project03Title: "Community SMS",
     project03Text:
-      "A ready-to-launch app for automatic SMS sending to a large recipient list, with personalized data per recipient such as customer debt balance or doctor appointment time. Pending regulatory approval.",
+      "Community SMS sends personalized SMS to a list, with different details per recipient (for example balance or appointment time). Intended for organizational, community, and school communication.",
     project03Cta: "Enter",
     project04Tag: "In Development",
     project04Title: "Project 04",

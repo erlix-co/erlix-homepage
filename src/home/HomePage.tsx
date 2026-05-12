@@ -129,7 +129,7 @@ export function HomePage() {
                 className="project-card__cta project-card__cta-with-logo project-card__cta-sms"
                 href="https://erlix.net/sms-sender/"
               >
-                <img className="project-card__logo-large" src="/project-logos/sms-sender-logo.png" alt="SMS Sender logo" />
+                <img className="project-card__logo-large" src="/project-logos/sms-sender-logo.png" alt="Community SMS logo" />
                 <span>{t.project03Cta}</span>
               </a>
             </article>

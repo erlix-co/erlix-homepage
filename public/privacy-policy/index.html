@@ -48,9 +48,10 @@
 
       .topbar {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: flex-start;
         align-items: center;
-        gap: 0.8rem;
+        gap: 0.65rem 1.1rem;
         margin-bottom: 0.8rem;
       }
 
@@ -126,10 +127,12 @@
   </head>
   <body>
     <main class="card">
-      <div class="topbar">
-        <a href="/">Back to Home</a>
-        <a href="/sms-sender/">SMS Sender</a>
-      </div>
+      <nav class="topbar" aria-label="Site">
+        <a href="/">Home</a>
+        <a href="https://erlix.net/linkcheck/">LinkCheck</a>
+        <a href="/bcc-alert/">BCC Alert</a>
+        <a href="/sms-sender/">Community SMS</a>
+      </nav>
 
       <h1>Privacy Policy</h1>
       <p class="effective-date">Effective date: January 1, <span id="year"></span></p>
@@ -138,6 +141,12 @@
         This Privacy Policy explains how Erlix ("we", "our", "us") handles information when you
         use our website, apps, and related tools for organizational communication, productivity,
         and community utility services.
+      </p>
+      <p>
+        It applies to the Erlix website and published tools, including LinkCheck (link and message
+        safety analysis), BCC Alert (Gmail and Outlook productivity add-ons), and Community SMS
+        (Android). Some sections apply only where a feature exists (for example SMS permissions on
+        Android).
       </p>
 
       <h2>1. Introduction</h2>
@@ -153,6 +162,22 @@
         <li>User-entered message content and communication templates</li>
         <li>Technical operational logs for service reliability and security monitoring</li>
         <li>Basic device/app diagnostics where required to operate the app safely</li>
+      </ul>
+      <p>Examples by product (non-exhaustive):</p>
+      <ul>
+        <li>
+          <strong>LinkCheck:</strong> text or URLs you submit for analysis are sent to our servers
+          only to perform the check you requested and return results.
+        </li>
+        <li>
+          <strong>BCC Alert:</strong> operates within your email client environment to help prevent
+          mistaken group addressing; it is not designed to collect unrelated mailbox content on
+          Erlix servers.
+        </li>
+        <li>
+          <strong>Community SMS:</strong> list and message data are processed primarily on your
+          device for composing and sending messages you approve.
+        </li>
       </ul>
       <p>We do not sell personal data.</p>
 
@@ -228,7 +253,7 @@
 
       <h2>12. Contact Information</h2>
       <p>
-        Email: <a href="mailto:schulgeld.gsmh.wien@gmail.com">schulgeld.gsmh.wien@gmail.com</a><br />
+        Email: <a href="mailto:erlix.co@gmail.com">erlix.co@gmail.com</a><br />
         Website: <a href="https://erlix.net">https://erlix.net</a>
       </p>
 
