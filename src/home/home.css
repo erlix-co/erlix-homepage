@@ -439,6 +439,15 @@ a {
   font-size: 0.9rem;
 }
 
+.home-footer a {
+  color: #9ed2ff;
+  text-decoration: none;
+}
+
+.home-footer a:hover {
+  text-decoration: underline;
+}
+
 [data-reveal] {
   opacity: 0;
   transform: translateY(24px);

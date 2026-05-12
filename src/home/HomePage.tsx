@@ -149,7 +149,11 @@ export function HomePage() {
         </section>
       </main>
 
-      <footer className="home-footer">{t.footer}</footer>
+      <footer className="home-footer">
+        <span>{t.footer}</span>
+        <span aria-hidden="true"> · </span>
+        <a href="/privacy-policy/">{t.privacyPolicy}</a>
+      </footer>
     </div>
   );
 }

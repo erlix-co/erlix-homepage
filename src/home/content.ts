@@ -41,6 +41,7 @@ export const homeContent = {
     project05Title: "Project 05",
     project05Text: "תוכנה חכמה של זיהוי פנים לצורך מיון תמונות משפחתיות.",
     footer: "כל הזכויות שמורות ל-Erlix",
+    privacyPolicy: "מדיניות פרטיות",
   },
   en: {
     navProjects: "Projects",
@@ -80,5 +81,6 @@ export const homeContent = {
     project05Title: "Project 05",
     project05Text: "Smart face-recognition software for organizing family photos.",
     footer: "All rights reserved by Erlix",
+    privacyPolicy: "Privacy Policy",
   },
 } as const;
