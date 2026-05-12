@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^privacy-policy$ /privacy-policy/ [R=301,L]
+</IfModule>

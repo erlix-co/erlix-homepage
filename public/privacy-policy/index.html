@@ -8,7 +8,7 @@
       name="description"
       content="Privacy Policy for Erlix tools and services, including Android SMS permissions, local file processing, and Google Drive file import."
     />
-    <link rel="canonical" href="https://erlix.net/privacy-policy/" />
+    <link rel="canonical" href="https://erlix.net/privacy-policy" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -203,6 +203,14 @@
           notifications, and community group communication.
         </li>
       </ul>
+      <p>
+        Community SMS does not send SMS messages automatically in the background. Messages are
+        sent only after visible user interaction and confirmation.
+      </p>
+      <p>
+        Community SMS does not read users' private SMS inbox content unless explicitly required
+        by a future feature and separately disclosed.
+      </p>
 
       <h2>5. Google Drive Integration</h2>
       <p>
@@ -257,13 +265,13 @@
         Website: <a href="https://erlix.net">https://erlix.net</a>
       </p>
 
-      <p class="footer">
-        Privacy Policy · Powered by <a href="https://erlix.net/">erlix.net</a>
-      </p>
+      <p class="footer">© <span id="footer-year"></span> Erlix. All rights reserved.</p>
     </main>
 
     <script>
-      document.getElementById("year").textContent = String(new Date().getFullYear());
+      const y = String(new Date().getFullYear());
+      document.getElementById("year").textContent = y;
+      document.getElementById("footer-year").textContent = y;
     </script>
   </body>
 </html>
