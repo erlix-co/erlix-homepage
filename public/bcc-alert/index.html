@@ -221,14 +221,23 @@
 
       .manifest-download {
         display: inline-block;
-        margin: 0.15rem 0.35rem;
-        padding: 0.35rem 0.75rem;
+        margin: 0.6rem 0 0;
+        padding: 0.45rem 0.9rem;
         border-radius: 10px;
         border: 1px solid rgba(136, 182, 255, 0.45);
         background: rgba(45, 140, 240, 0.2);
         color: #9ed2ff;
+        font-family: inherit;
+        font-size: inherit;
         font-weight: 600;
         text-decoration: none;
+        cursor: pointer;
+        appearance: none;
+      }
+
+      .manifest-download:disabled {
+        opacity: 0.65;
+        cursor: wait;
       }
 
       .manifest-download:hover {
@@ -561,27 +570,12 @@
         </h2>
 
         <p class="install-lead lang-block" data-lang="he">
-          לפני ההתקנה, הורידו את קובץ המניפסט לפרודקשן
-          (<code>manifest.production.xml</code>):
-          <a
-            class="manifest-download"
-            href="https://erlix.net/bcc-alert-addin/addin/manifest.xml"
-            download="manifest.production.xml"
-            >הורדת קובץ המניפסט</a
-          >
-          — שמרו במחשב. (בשרת הקובץ מוגש כ-<code>manifest.xml</code>; זהו עותק של המניפסט לפרודקשן.)
+          לפני ההתקנה, הורידו את קובץ המניפסט ושמרו במחשב.
+          <button type="button" class="manifest-download">הורדת קובץ המניפסט</button>
         </p>
         <p class="install-lead lang-block" data-lang="en" hidden>
-          Before installing, download the production manifest file
-          (<code>manifest.production.xml</code>):
-          <a
-            class="manifest-download"
-            href="https://erlix.net/bcc-alert-addin/addin/manifest.xml"
-            download="manifest.production.xml"
-            >Download manifest file</a
-          >
-          — save it on your computer. (On the server the file is served as <code>manifest.xml</code>; it is the
-          production manifest copy.)
+          Before installing, download the manifest file and save it on your computer.
+          <button type="button" class="manifest-download">Download manifest file</button>
         </p>
 
         <div class="install-details lang-block" data-lang="he">
@@ -596,7 +590,7 @@
                   <strong>הוספה מותאמת (Add a custom add-in)</strong> →
                   <strong>הוספה מהקובץ (Add from file)</strong>.
                 </li>
-                <li>בחרו את קובץ <code>manifest.production.xml</code> שהורדתם מהקישור למעלה.</li>
+                <li>בחרו את קובץ המניפסט שהורדתם.</li>
                 <li>אשרו את ההתקנה. אם Outlook מבקש — סגרו ופתחו מחדש את Outlook.</li>
                 <li>בכתיבת הודעה חדשה, ודאו שהתוסף BCC Alert מופיע (בסרגל או בהגדרות התוספים).</li>
               </ol>
@@ -613,10 +607,7 @@
                 </li>
                 <li>לחצו על <strong>הגדרות (Settings)</strong> → <strong>הצג את כל הגדרות Outlook</strong>.</li>
                 <li>עברו ל-<strong>דואר</strong> → <strong>תוספים מותאמים (Custom add-ins)</strong> (אם זמין בארגון שלכם).</li>
-                <li>
-                  בחרו <strong>הוספה מתוך קובץ / Add from file</strong> והעלו את
-                  <code>manifest.production.xml</code>.
-                </li>
+                <li>בחרו <strong>הוספה מתוך קובץ / Add from file</strong> והעלו את קובץ המניפסט.</li>
                 <li>אם האפשרות לא מופיעה — ייתכן שנדרשת התקנה מרכזית על ידי מנהל IT (Microsoft 365 Admin Center).</li>
                 <li>לאחר ההתקנה, רעננו את הדפדפן ופתחו הודעה חדשה לבדיקה.</li>
               </ol>
@@ -636,7 +627,7 @@
                   Choose <strong>My add-ins</strong> → <strong>Add a custom add-in</strong> →
                   <strong>Add from file</strong>.
                 </li>
-                <li>Select the <code>manifest.production.xml</code> file you downloaded above.</li>
+                <li>Select the manifest file you downloaded.</li>
                 <li>Confirm installation. If Outlook asks, restart Outlook.</li>
                 <li>When composing a new message, confirm BCC Alert appears (ribbon or add-in settings).</li>
               </ol>
@@ -651,7 +642,7 @@
                 <li>Go to <a href="https://outlook.office.com/" target="_blank" rel="noopener">outlook.office.com</a>.</li>
                 <li>Click <strong>Settings</strong> → <strong>View all Outlook settings</strong>.</li>
                 <li>Open <strong>Mail</strong> → <strong>Custom add-ins</strong> (if available in your organization).</li>
-                <li>Choose <strong>Add from file</strong> and upload <code>manifest.production.xml</code>.</li>
+                <li>Choose <strong>Add from file</strong> and upload the manifest file.</li>
                 <li>If the option is missing, your IT admin may need central deployment (Microsoft 365 Admin Center).</li>
                 <li>After install, refresh the browser and open a new message to test.</li>
               </ol>
@@ -696,13 +687,6 @@
           לאחר אישור ניסיון או תשלום, נפעיל את חשבון Outlook שלכם ידנית (שלחו את כתובת הדואר המדויקת כפי שמופיעה ב-Outlook).
           ההגנה תופיע בתוך זמן קצר לאחר האישור.
         </p>
-        <p
-          style="margin-bottom: 0; color: #b6c7ea; font-size: 0.92rem"
-          data-he="אין עדיין הרשמה אוטומטית באתר — כל ההפעלות מתבצעות ידנית ללקוחות ראשונים."
-          data-en="There is no automatic signup on the site yet — all activations are handled manually for early customers."
-        >
-          אין עדיין הרשמה אוטומטית באתר — כל ההפעלות מתבצעות ידנית ללקוחות ראשונים.
-        </p>
       </section>
 
       <p class="powered-by">
@@ -712,8 +696,8 @@
       </p>
     </main>
     <script>
-      const MANIFEST_URL = "https://erlix.net/bcc-alert-addin/addin/manifest.xml";
-      const MANIFEST_DOWNLOAD_NAME = "manifest.production.xml";
+      const MANIFEST_URL = "/bcc-alert-addin/addin/manifest.xml";
+      const MANIFEST_DOWNLOAD_NAME = "BCC-Alert-Outlook.xml";
 
       const heBtn = document.getElementById("lang-he");
       const enBtn = document.getElementById("lang-en");
@@ -722,9 +706,36 @@
       const altImages = Array.from(document.querySelectorAll("img[data-alt-he][data-alt-en]"));
       const toolsSection = document.querySelector(".tools[data-aria-he]");
 
-      document.querySelectorAll(".manifest-download").forEach((link) => {
-        link.href = MANIFEST_URL;
-        link.setAttribute("download", MANIFEST_DOWNLOAD_NAME);
+      document.querySelectorAll(".manifest-download").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          btn.disabled = true;
+          try {
+            const res = await fetch(MANIFEST_URL, { cache: "no-store" });
+            if (!res.ok) {
+              throw new Error("HTTP " + res.status);
+            }
+            const blob = await res.blob();
+            const objectUrl = URL.createObjectURL(blob);
+            const temp = document.createElement("a");
+            temp.href = objectUrl;
+            temp.download = MANIFEST_DOWNLOAD_NAME;
+            temp.rel = "noopener";
+            document.body.appendChild(temp);
+            temp.click();
+            temp.remove();
+            URL.revokeObjectURL(objectUrl);
+          } catch (err) {
+            console.error("Manifest download failed:", err);
+            const isHe = document.documentElement.lang === "he";
+            window.alert(
+              isHe
+                ? "לא הצלחנו להוריד את הקובץ. נסו שוב או פנו אלינו במייל."
+                : "Could not download the file. Please try again or email us for help."
+            );
+          } finally {
+            btn.disabled = false;
+          }
+        });
       });
 
       function setLanguage(lang) {

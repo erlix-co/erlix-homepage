@@ -27,6 +27,15 @@ function publicHtmlPages(): Plugin {
   };
 }
 
+const addinProxy = {
+  "/bcc-alert-addin": {
+    target: "https://erlix.net",
+    changeOrigin: true,
+  },
+};
+
 export default defineConfig({
   plugins: [react(), publicHtmlPages()],
+  server: { proxy: addinProxy },
+  preview: { proxy: addinProxy },
 });
