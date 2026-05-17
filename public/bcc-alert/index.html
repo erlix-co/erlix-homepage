@@ -49,6 +49,37 @@
         padding: clamp(1.2rem, 3vw, 2rem);
       }
 
+      .top-row {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 0.75rem;
+      }
+
+      .lang-toggle {
+        display: flex;
+        border: 1px solid rgba(95, 155, 255, 0.35);
+        border-radius: 999px;
+        overflow: hidden;
+        background: rgba(12, 25, 54, 0.65);
+      }
+
+      .lang-toggle button {
+        border: none;
+        background: transparent;
+        color: #b6c7ea;
+        font-family: "Rubik", sans-serif;
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 0.36rem 0.85rem;
+        cursor: pointer;
+      }
+
+      .lang-toggle button.active {
+        background: #2d8cf0;
+        color: #fff;
+        cursor: default;
+      }
+
       .logo-wrap {
         border-radius: 28px;
         background: #f1f1f1;
@@ -182,6 +213,28 @@
         background: rgba(8, 20, 46, 0.4);
       }
 
+      .install-lead {
+        margin: 0 0 0.75rem;
+        color: #d7e3ff;
+        line-height: 1.65;
+      }
+
+      .manifest-download {
+        display: inline-block;
+        margin: 0.15rem 0.35rem;
+        padding: 0.35rem 0.75rem;
+        border-radius: 10px;
+        border: 1px solid rgba(136, 182, 255, 0.45);
+        background: rgba(45, 140, 240, 0.2);
+        color: #9ed2ff;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .manifest-download:hover {
+        background: rgba(45, 140, 240, 0.35);
+      }
+
       .install-details {
         margin-top: 0.75rem;
       }
@@ -208,7 +261,7 @@
 
       .install-details summary::after {
         content: "+";
-        float: left;
+        float: inline-end;
         color: #9ed2ff;
         font-weight: 700;
       }
@@ -226,7 +279,7 @@
 
       .install-body ol {
         margin: 0.5rem 0 0;
-        padding-right: 1.2rem;
+        padding-inline-start: 1.2rem;
       }
 
       .install-body li {
@@ -258,7 +311,7 @@
 
       .pricing-card ul {
         margin: 0.5rem 0 0;
-        padding-right: 1.2rem;
+        padding-inline-start: 1.2rem;
         color: #d7e3ff;
         line-height: 1.65;
       }
@@ -357,93 +410,197 @@
   </head>
   <body>
     <main class="card">
+      <div class="top-row">
+        <div class="lang-toggle" role="group" aria-label="Language switch">
+          <button id="lang-he" class="active" type="button">עב</button>
+          <button id="lang-en" type="button">EN</button>
+        </div>
+      </div>
+
       <div class="logo-wrap">
         <img src="./BCC-Alert-logo.png" alt="BCC Alert logo" />
       </div>
-      <h1>לחיצה קטנה - מבוכה גדולה. אפשר למנוע את זה!</h1>
-      <p class="intro">
+      <h1
+        data-he="לחיצה קטנה - מבוכה גדולה. אפשר למנוע את זה!"
+        data-en="A small click — a big embarrassment. You can prevent it!"
+      >
+        לחיצה קטנה - מבוכה גדולה. אפשר למנוע את זה!
+      </h1>
+      <p
+        class="intro"
+        data-he="BCC Alert נועד לצמצם טעויות מביכות בשליחת מייל קבוצתי, כאשר כתובות נמענים נשארות גלויות במקום לעבור לשדה BCC."
+        data-en="BCC Alert helps reduce embarrassing group-email mistakes when recipient addresses stay visible instead of moving to BCC."
+      >
         BCC Alert נועד לצמצם טעויות מביכות בשליחת מייל קבוצתי, כאשר כתובות נמענים נשארות גלויות במקום לעבור לשדה BCC.
       </p>
 
       <section class="trial-cta" aria-labelledby="trial-heading">
-        <h2 id="trial-heading">התחילו ניסיון חינם ל-7 ימים</h2>
-        <p>הגנו על תיבת Outlook מפני חשיפת נמענים גלויים בטעות — לפני שליחה.</p>
-        <a class="btn-primary" href="#contact-install">התחלת ניסיון חינם</a>
+        <h2
+          id="trial-heading"
+          data-he="התחילו ניסיון חינם ל-7 ימים"
+          data-en="Start Your 7-Day Free Trial"
+        >
+          התחילו ניסיון חינם ל-7 ימים
+        </h2>
+        <p
+          data-he="הגנו על תיבת Outlook מפני חשיפת נמענים גלויים בטעות — לפני שליחה."
+          data-en="Protect your Outlook mailbox from accidental visible recipient exposure — before you send."
+        >
+          הגנו על תיבת Outlook מפני חשיפת נמענים גלויים בטעות — לפני שליחה.
+        </p>
+        <a
+          class="btn-primary"
+          href="#contact-install"
+          data-he="התחלת ניסיון חינם"
+          data-en="Start Free Trial"
+          >התחלת ניסיון חינם</a
+        >
       </section>
 
-      <p class="highlight">
+      <p
+        class="highlight"
+        data-he="חשוב לדעת: החסימה אינה הרמטית ב-100%. היא שכבת הגנה חכמה שמפחיתה סיכון באופן משמעותי. בגרסת Outlook ההגנה בטוחה וחזקה יותר מאשר בגרסת Gmail, בזכות נקודת אינטגרציה יציבה יותר עם תהליך השליחה."
+        data-en="Important: blocking is not 100% airtight. It is a smart protection layer that significantly reduces risk. The Outlook add-in is stronger and more reliable than the Gmail Chrome extension, thanks to a more stable integration point in the send flow."
+      >
         חשוב לדעת: החסימה אינה הרמטית ב-100%. היא שכבת הגנה חכמה שמפחיתה סיכון באופן משמעותי.
         בגרסת Outlook ההגנה בטוחה וחזקה יותר מאשר בגרסת Gmail, בזכות נקודת אינטגרציה יציבה יותר עם תהליך השליחה.
       </p>
 
       <section class="section-block" aria-labelledby="how-heading">
-        <h2 class="section-title" id="how-heading">איך זה עובד</h2>
+        <h2 class="section-title" id="how-heading" data-he="איך זה עובד" data-en="How it works">איך זה עובד</h2>
         <ol class="how-steps">
           <li class="how-step">
             <span class="num" aria-hidden="true">1</span>
-            <p>מתקינים את תוסף Outlook (מדריך התקנה למטה).</p>
+            <p
+              data-he="מתקינים את תוסף Outlook (מדריך התקנה למטה)."
+              data-en="Install the Outlook add-in (installation guide below)."
+            >
+              מתקינים את תוסף Outlook (מדריך התקנה למטה).
+            </p>
           </li>
           <li class="how-step">
             <span class="num" aria-hidden="true">2</span>
-            <p>שולחים לנו את כתובת הדואר של Outlook לאישור והפעלה.</p>
+            <p
+              data-he="שולחים לנו את כתובת הדואר של Outlook לאישור והפעלה."
+              data-en="Send us your Outlook email address for approval and activation."
+            >
+              שולחים לנו את כתובת הדואר של Outlook לאישור והפעלה.
+            </p>
           </li>
           <li class="how-step">
             <span class="num" aria-hidden="true">3</span>
-            <p>לאחר אישור — ההגנה פעילה אוטומטית בחשבון שלכם.</p>
+            <p
+              data-he="לאחר אישור — ההגנה פעילה אוטומטית בחשבון שלכם."
+              data-en="After approval — protection is active automatically in your account."
+            >
+              לאחר אישור — ההגנה פעילה אוטומטית בחשבון שלכם.
+            </p>
           </li>
         </ol>
       </section>
 
-      <section class="tools" aria-label="סוגי התוסף">
+      <section
+        class="tools"
+        data-aria-he="סוגי התוסף"
+        data-aria-en="Add-in types"
+        aria-label="סוגי התוסף"
+      >
         <article class="tool">
-          <h2>תוסף Gmail</h2>
-          <p>
-            בתוסף Gmail אנחנו מזהים דפוסים מסוכנים לפני השליחה ומתריעים למשתמש לעצור ולתקן.
+          <h2 data-he="תוסף Gmail בדפדפן כרום" data-en="Gmail extension in Google Chrome">
+            תוסף Gmail בדפדפן כרום
+          </h2>
+          <p
+            data-he="בתוסף Gmail בדפדפן כרום אנחנו מזהים דפוסים מסוכנים לפני השליחה ומתריעים למשתמש לעצור ולתקן. בגלל מגבלות סביבת הדפדפן והאינטגרציה של Gmail, זו הגנה חשובה אך לא מוחלטת."
+            data-en="In the Gmail Chrome extension we detect risky patterns before send and alert you to stop and fix. Due to browser and Gmail integration limits, this is important protection but not absolute."
+          >
+            בתוסף Gmail בדפדפן כרום אנחנו מזהים דפוסים מסוכנים לפני השליחה ומתריעים למשתמש לעצור ולתקן.
             בגלל מגבלות סביבת הדפדפן והאינטגרציה של Gmail, זו הגנה חשובה אך לא מוחלטת.
           </p>
           <figure>
-            <img src="./gmail.png" alt="צילום מסך של תוסף BCC Alert עבור Gmail" />
-            <figcaption>תצוגת תוסף Gmail</figcaption>
+            <img
+              src="./gmail.png"
+              data-alt-he="צילום מסך של תוסף BCC Alert — תוסף Gmail בדפדפן כרום"
+              data-alt-en="Screenshot of BCC Alert — Gmail extension in Google Chrome"
+              alt="צילום מסך של תוסף BCC Alert — תוסף Gmail בדפדפן כרום"
+            />
+            <figcaption data-he="תצוגת תוסף Gmail בדפדפן כרום" data-en="Gmail Chrome extension preview">
+              תצוגת תוסף Gmail בדפדפן כרום
+            </figcaption>
           </figure>
         </article>
 
         <article class="tool">
-          <h2>תוסף Outlook</h2>
-          <p>
+          <h2 data-he="תוסף Outlook" data-en="Outlook add-in">תוסף Outlook</h2>
+          <p
+            data-he="בתוסף Outlook ההתרעה מחוברת עמוק יותר לזרימת השליחה, ולכן האכיפה יציבה ובטוחה יותר. עדיין חשוב לעבוד בזהירות, אבל בפועל רמת ההגנה גבוהה יותר."
+            data-en="In the Outlook add-in the alert is connected deeper to the send flow, so enforcement is more stable and reliable. Still work carefully, but in practice protection is higher."
+          >
             בתוסף Outlook ההתרעה מחוברת עמוק יותר לזרימת השליחה, ולכן האכיפה יציבה ובטוחה יותר.
             עדיין חשוב לעבוד בזהירות, אבל בפועל רמת ההגנה גבוהה יותר.
           </p>
           <figure>
-            <img src="./outlook.png" alt="צילום מסך של תוסף BCC Alert עבור Outlook" />
-            <figcaption>תצוגת תוסף Outlook</figcaption>
+            <img
+              src="./outlook.png"
+              data-alt-he="צילום מסך של תוסף BCC Alert עבור Outlook"
+              data-alt-en="Screenshot of BCC Alert for Outlook"
+              alt="צילום מסך של תוסף BCC Alert עבור Outlook"
+            />
+            <figcaption data-he="תצוגת תוסף Outlook" data-en="Outlook add-in preview">תצוגת תוסף Outlook</figcaption>
           </figure>
         </article>
       </section>
 
       <section class="section-block" id="installation" aria-labelledby="install-heading">
-        <h2 class="section-title" id="install-heading">מדריך התקנה — Outlook</h2>
-        <p style="margin: 0 0 0.75rem; color: #d7e3ff; line-height: 1.65">
-          לפני ההתקנה, הורידו את קובץ המניפסט:
-          <a href="https://erlix.net/bcc-alert-addin/addin/manifest.xml" target="_blank" rel="noopener"
-            >manifest.xml</a
+        <h2
+          class="section-title"
+          id="install-heading"
+          data-he="מדריך התקנה — Outlook"
+          data-en="Installation guide — Outlook"
+        >
+          מדריך התקנה — Outlook
+        </h2>
+
+        <p class="install-lead lang-block" data-lang="he">
+          לפני ההתקנה, הורידו את קובץ המניפסט לפרודקשן
+          (<code>manifest.production.xml</code>):
+          <a
+            class="manifest-download"
+            href="https://erlix.net/bcc-alert-addin/addin/manifest.xml"
+            download="manifest.production.xml"
+            >הורדת קובץ המניפסט</a
           >
-          (שמרו במחשב).
+          — שמרו במחשב. (בשרת הקובץ מוגש כ-<code>manifest.xml</code>; זהו עותק של המניפסט לפרודקשן.)
+        </p>
+        <p class="install-lead lang-block" data-lang="en" hidden>
+          Before installing, download the production manifest file
+          (<code>manifest.production.xml</code>):
+          <a
+            class="manifest-download"
+            href="https://erlix.net/bcc-alert-addin/addin/manifest.xml"
+            download="manifest.production.xml"
+            >Download manifest file</a
+          >
+          — save it on your computer. (On the server the file is served as <code>manifest.xml</code>; it is the
+          production manifest copy.)
         </p>
 
-        <div class="install-details">
+        <div class="install-details lang-block" data-lang="he">
           <details>
             <summary>Outlook Desktop (Windows / Mac)</summary>
             <div class="install-body">
               <ol>
                 <li>פתחו את אפליקציית Outlook (לא דפדפן).</li>
                 <li>בחרו <strong>קובץ (File)</strong> → <strong>קבלת תוספים (Get Add-ins)</strong>.</li>
-                <li>בחרו <strong>תוספים מותאמים אישית (My Add-ins)</strong> → <strong>הוספה מותאמת (Add a custom add-in)</strong> → <strong>הוספה מהקובץ (Add from file)</strong>.</li>
-                <li>בחרו את קובץ <code>manifest.xml</code> שהורדתם מהקישור למעלה.</li>
+                <li>
+                  בחרו <strong>תוספים מותאמים אישית (My Add-ins)</strong> →
+                  <strong>הוספה מותאמת (Add a custom add-in)</strong> →
+                  <strong>הוספה מהקובץ (Add from file)</strong>.
+                </li>
+                <li>בחרו את קובץ <code>manifest.production.xml</code> שהורדתם מהקישור למעלה.</li>
                 <li>אשרו את ההתקנה. אם Outlook מבקש — סגרו ופתחו מחדש את Outlook.</li>
                 <li>בכתיבת הודעה חדשה, ודאו שהתוסף BCC Alert מופיע (בסרגל או בהגדרות התוספים).</li>
               </ol>
-              <div class="screenshot-placeholder" aria-hidden="true">מקום לצילום מסך — התקנה ב-Outlook Desktop
-              </div>
+              <div class="screenshot-placeholder" aria-hidden="true">מקום לצילום מסך — התקנה ב-Outlook Desktop</div>
             </div>
           </details>
 
@@ -451,10 +608,15 @@
             <summary>Outlook Web (דפדפן)</summary>
             <div class="install-body">
               <ol>
-                <li>היכנסו ל-<a href="https://outlook.office.com/" target="_blank" rel="noopener">outlook.office.com</a>.</li>
+                <li>
+                  היכנסו ל-<a href="https://outlook.office.com/" target="_blank" rel="noopener">outlook.office.com</a>.
+                </li>
                 <li>לחצו על <strong>הגדרות (Settings)</strong> → <strong>הצג את כל הגדרות Outlook</strong>.</li>
                 <li>עברו ל-<strong>דואר</strong> → <strong>תוספים מותאמים (Custom add-ins)</strong> (אם זמין בארגון שלכם).</li>
-                <li>בחרו <strong>הוספה מתוך קובץ / Add from file</strong> והעלו את <code>manifest.xml</code>.</li>
+                <li>
+                  בחרו <strong>הוספה מתוך קובץ / Add from file</strong> והעלו את
+                  <code>manifest.production.xml</code>.
+                </li>
                 <li>אם האפשרות לא מופיעה — ייתכן שנדרשת התקנה מרכזית על ידי מנהל IT (Microsoft 365 Admin Center).</li>
                 <li>לאחר ההתקנה, רעננו את הדפדפן ופתחו הודעה חדשה לבדיקה.</li>
               </ol>
@@ -462,33 +624,139 @@
             </div>
           </details>
         </div>
+
+        <div class="install-details lang-block" data-lang="en" hidden>
+          <details>
+            <summary>Outlook Desktop (Windows / Mac)</summary>
+            <div class="install-body">
+              <ol>
+                <li>Open the Outlook desktop app (not the browser).</li>
+                <li>Select <strong>File</strong> → <strong>Get Add-ins</strong>.</li>
+                <li>
+                  Choose <strong>My add-ins</strong> → <strong>Add a custom add-in</strong> →
+                  <strong>Add from file</strong>.
+                </li>
+                <li>Select the <code>manifest.production.xml</code> file you downloaded above.</li>
+                <li>Confirm installation. If Outlook asks, restart Outlook.</li>
+                <li>When composing a new message, confirm BCC Alert appears (ribbon or add-in settings).</li>
+              </ol>
+              <div class="screenshot-placeholder" aria-hidden="true">Screenshot placeholder — Outlook Desktop install</div>
+            </div>
+          </details>
+
+          <details>
+            <summary>Outlook on the web</summary>
+            <div class="install-body">
+              <ol>
+                <li>Go to <a href="https://outlook.office.com/" target="_blank" rel="noopener">outlook.office.com</a>.</li>
+                <li>Click <strong>Settings</strong> → <strong>View all Outlook settings</strong>.</li>
+                <li>Open <strong>Mail</strong> → <strong>Custom add-ins</strong> (if available in your organization).</li>
+                <li>Choose <strong>Add from file</strong> and upload <code>manifest.production.xml</code>.</li>
+                <li>If the option is missing, your IT admin may need central deployment (Microsoft 365 Admin Center).</li>
+                <li>After install, refresh the browser and open a new message to test.</li>
+              </ol>
+              <div class="screenshot-placeholder" aria-hidden="true">Screenshot placeholder — Outlook on the web install</div>
+            </div>
+          </details>
+        </div>
       </section>
 
       <section class="section-block pricing-card" aria-labelledby="pricing-heading">
-        <h2 class="section-title" id="pricing-heading">מחירים</h2>
-        <ul>
+        <h2 class="section-title" id="pricing-heading" data-he="מחירים" data-en="Pricing">מחירים</h2>
+        <ul class="lang-block" data-lang="he">
           <li><strong>ניסיון חינם:</strong> 7 ימים לאחר הפעלה ידנית של החשבון.</li>
           <li><strong>מנוי:</strong> צרו קשר לקבלת הצעת מחיר — ללא תשלום אוטומטי בשלב זה.</li>
+        </ul>
+        <ul class="lang-block" data-lang="en" hidden>
+          <li><strong>Free trial:</strong> 7 days after manual account activation.</li>
+          <li><strong>Subscription:</strong> contact us for pricing — no automatic billing at this stage.</li>
         </ul>
       </section>
 
       <section class="section-block contact-section" id="contact-install" aria-labelledby="contact-heading">
-        <h2 class="section-title" id="contact-heading">הפעלה, תשלום ותמיכה</h2>
-        <p>צריכים הפעלת ניסיון, רכישת מנוי או עזרה בהתקנה?</p>
+        <h2
+          class="section-title"
+          id="contact-heading"
+          data-he="הפעלה, תשלום ותמיכה"
+          data-en="Activation, billing, and support"
+        >
+          הפעלה, תשלום ותמיכה
+        </h2>
+        <p
+          data-he="צריכים הפעלת ניסיון, רכישת מנוי או עזרה בהתקנה?"
+          data-en="Need trial activation, a subscription, or help with installation?"
+        >
+          צריכים הפעלת ניסיון, רכישת מנוי או עזרה בהתקנה?
+        </p>
         <a class="contact-email" href="mailto:erlix.co@gmail.com">erlix.co@gmail.com</a>
-        <p>
+        <p
+          data-he="לאחר אישור ניסיון או תשלום, נפעיל את חשבון Outlook שלכם ידנית (שלחו את כתובת הדואר המדויקת כפי שמופיעה ב-Outlook). ההגנה תופיע בתוך זמן קצר לאחר האישור."
+          data-en="After trial or payment approval, we activate your Outlook account manually (send the exact email address as shown in Outlook). Protection should appear shortly after approval."
+        >
           לאחר אישור ניסיון או תשלום, נפעיל את חשבון Outlook שלכם ידנית (שלחו את כתובת הדואר המדויקת כפי שמופיעה ב-Outlook).
           ההגנה תופיע בתוך זמן קצר לאחר האישור.
         </p>
-        <p style="margin-bottom: 0; color: #b6c7ea; font-size: 0.92rem">
+        <p
+          style="margin-bottom: 0; color: #b6c7ea; font-size: 0.92rem"
+          data-he="אין עדיין הרשמה אוטומטית באתר — כל ההפעלות מתבצעות ידנית ללקוחות ראשונים."
+          data-en="There is no automatic signup on the site yet — all activations are handled manually for early customers."
+        >
           אין עדיין הרשמה אוטומטית באתר — כל ההפעלות מתבצעות ידנית ללקוחות ראשונים.
         </p>
       </section>
 
       <p class="powered-by">
-        מופעל על ידי <a href="https://erlix.net/" target="_blank" rel="noopener">erlix.net</a>
+        <span class="footer-lead" data-he="מופעל על ידי " data-en="Powered by "></span
+        ><a href="https://erlix.net/" target="_blank" rel="noopener">erlix.net</a>
         · <a href="/privacy-policy/">Privacy Policy</a>
       </p>
     </main>
+    <script>
+      const MANIFEST_URL = "https://erlix.net/bcc-alert-addin/addin/manifest.xml";
+      const MANIFEST_DOWNLOAD_NAME = "manifest.production.xml";
+
+      const heBtn = document.getElementById("lang-he");
+      const enBtn = document.getElementById("lang-en");
+      const translatable = Array.from(document.querySelectorAll("[data-he][data-en]"));
+      const langBlocks = Array.from(document.querySelectorAll(".lang-block"));
+      const altImages = Array.from(document.querySelectorAll("img[data-alt-he][data-alt-en]"));
+      const toolsSection = document.querySelector(".tools[data-aria-he]");
+
+      document.querySelectorAll(".manifest-download").forEach((link) => {
+        link.href = MANIFEST_URL;
+        link.setAttribute("download", MANIFEST_DOWNLOAD_NAME);
+      });
+
+      function setLanguage(lang) {
+        const isHe = lang === "he";
+        document.documentElement.lang = isHe ? "he" : "en";
+        document.documentElement.dir = isHe ? "rtl" : "ltr";
+        heBtn.classList.toggle("active", isHe);
+        enBtn.classList.toggle("active", !isHe);
+
+        translatable.forEach((el) => {
+          el.textContent = isHe ? el.getAttribute("data-he") : el.getAttribute("data-en");
+        });
+
+        langBlocks.forEach((el) => {
+          el.hidden = el.getAttribute("data-lang") !== lang;
+        });
+
+        altImages.forEach((img) => {
+          img.alt = isHe ? img.getAttribute("data-alt-he") : img.getAttribute("data-alt-en");
+        });
+
+        if (toolsSection) {
+          toolsSection.setAttribute(
+            "aria-label",
+            isHe ? toolsSection.getAttribute("data-aria-he") : toolsSection.getAttribute("data-aria-en")
+          );
+        }
+      }
+
+      heBtn.addEventListener("click", () => setLanguage("he"));
+      enBtn.addEventListener("click", () => setLanguage("en"));
+      setLanguage("he");
+    </script>
   </body>
 </html>
