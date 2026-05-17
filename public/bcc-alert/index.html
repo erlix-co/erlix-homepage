@@ -6,7 +6,13 @@
     <title>BCC Alert | Erlix</title>
     <meta
       name="description"
-      content="BCC Alert by Erlix - prevent visible group email mistakes."
+      content="BCC Alert by Erlix - prevent visible group email mistakes. 7-day free trial for Outlook. Manual activation and support."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
     />
     <style>
       :root {
@@ -15,6 +21,10 @@
 
       * {
         box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
       }
 
       body {
@@ -59,6 +69,11 @@
         text-align: center;
       }
 
+      h2.section-title {
+        margin: 0 0 0.75rem;
+        font-size: clamp(1.1rem, 2.6vw, 1.35rem);
+      }
+
       .intro {
         margin: 0;
         text-align: center;
@@ -74,6 +89,205 @@
         background: rgba(255, 216, 106, 0.1);
         color: #ffe39f;
         line-height: 1.6;
+      }
+
+      .trial-cta {
+        margin: 1.2rem 0 1.4rem;
+        padding: 1.1rem 1.15rem;
+        border-radius: 16px;
+        border: 1px solid rgba(53, 195, 255, 0.45);
+        background: linear-gradient(135deg, rgba(45, 140, 240, 0.22), rgba(8, 20, 46, 0.6));
+        text-align: center;
+      }
+
+      .trial-cta h2 {
+        margin: 0 0 0.5rem;
+        font-size: clamp(1.15rem, 2.8vw, 1.45rem);
+      }
+
+      .trial-cta p {
+        margin: 0 0 1rem;
+        color: #d7e3ff;
+        line-height: 1.65;
+      }
+
+      .btn-primary {
+        display: inline-block;
+        padding: 0.65rem 1.35rem;
+        border-radius: 12px;
+        border: 1px solid rgba(136, 182, 255, 0.5);
+        background: linear-gradient(180deg, #2d8cf0, #1d6ac9);
+        color: #eff4ff;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 22px rgba(45, 140, 240, 0.35);
+      }
+
+      .how-steps {
+        display: grid;
+        gap: 0.85rem;
+        margin: 0 0 1.4rem;
+        padding: 0;
+        list-style: none;
+      }
+
+      @media (min-width: 700px) {
+        .how-steps {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .how-step {
+        border: 1px solid rgba(136, 182, 255, 0.28);
+        border-radius: 14px;
+        padding: 0.9rem 0.85rem;
+        background: rgba(8, 20, 46, 0.45);
+        text-align: center;
+      }
+
+      .how-step .num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        margin-bottom: 0.45rem;
+        border-radius: 50%;
+        background: rgba(45, 140, 240, 0.25);
+        border: 1px solid rgba(136, 182, 255, 0.4);
+        font-weight: 700;
+        font-size: 0.95rem;
+      }
+
+      .how-step p {
+        margin: 0;
+        color: #d7e3ff;
+        line-height: 1.55;
+        font-size: 0.95rem;
+      }
+
+      .section-block {
+        margin-bottom: 1.4rem;
+        border: 1px solid rgba(136, 182, 255, 0.25);
+        border-radius: 16px;
+        padding: 1rem;
+        background: rgba(8, 20, 46, 0.4);
+      }
+
+      .install-details {
+        margin-top: 0.75rem;
+      }
+
+      .install-details details {
+        margin-bottom: 0.65rem;
+        border: 1px solid rgba(136, 182, 255, 0.22);
+        border-radius: 12px;
+        background: rgba(8, 20, 46, 0.35);
+        overflow: hidden;
+      }
+
+      .install-details summary {
+        cursor: pointer;
+        padding: 0.75rem 0.9rem;
+        font-weight: 600;
+        color: #eff4ff;
+        list-style: none;
+      }
+
+      .install-details summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .install-details summary::after {
+        content: "+";
+        float: left;
+        color: #9ed2ff;
+        font-weight: 700;
+      }
+
+      .install-details details[open] summary::after {
+        content: "−";
+      }
+
+      .install-body {
+        padding: 0 0.9rem 0.9rem;
+        color: #d7e3ff;
+        line-height: 1.65;
+        font-size: 0.95rem;
+      }
+
+      .install-body ol {
+        margin: 0.5rem 0 0;
+        padding-right: 1.2rem;
+      }
+
+      .install-body li {
+        margin-bottom: 0.45rem;
+      }
+
+      .install-body a {
+        color: #9ed2ff;
+      }
+
+      .screenshot-placeholder {
+        margin-top: 0.85rem;
+        padding: 1.5rem 1rem;
+        border-radius: 12px;
+        border: 1px dashed rgba(136, 182, 255, 0.35);
+        background: rgba(255, 255, 255, 0.03);
+        color: #b6c7ea;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      .pricing-card {
+        margin-top: 0.5rem;
+        padding: 1rem;
+        border-radius: 14px;
+        border: 1px solid rgba(136, 182, 255, 0.3);
+        background: rgba(13, 28, 61, 0.55);
+      }
+
+      .pricing-card ul {
+        margin: 0.5rem 0 0;
+        padding-right: 1.2rem;
+        color: #d7e3ff;
+        line-height: 1.65;
+      }
+
+      .contact-section p {
+        margin: 0 0 0.65rem;
+        color: #d7e3ff;
+        line-height: 1.7;
+      }
+
+      .contact-email {
+        display: inline-block;
+        margin: 0.25rem 0 0.75rem;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #9ed2ff;
+        text-decoration: none;
+      }
+
+      .contact-email:hover {
+        text-decoration: underline;
+      }
+
+      code {
+        font-family: ui-monospace, Consolas, monospace;
+        font-size: 0.88em;
+        padding: 0.1em 0.35em;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.08);
       }
 
       .tools {
@@ -151,10 +365,34 @@
         BCC Alert נועד לצמצם טעויות מביכות בשליחת מייל קבוצתי, כאשר כתובות נמענים נשארות גלויות במקום לעבור לשדה BCC.
       </p>
 
+      <section class="trial-cta" aria-labelledby="trial-heading">
+        <h2 id="trial-heading">התחילו ניסיון חינם ל-7 ימים</h2>
+        <p>הגנו על תיבת Outlook מפני חשיפת נמענים גלויים בטעות — לפני שליחה.</p>
+        <a class="btn-primary" href="#contact-install">התחלת ניסיון חינם</a>
+      </section>
+
       <p class="highlight">
         חשוב לדעת: החסימה אינה הרמטית ב-100%. היא שכבת הגנה חכמה שמפחיתה סיכון באופן משמעותי.
         בגרסת Outlook ההגנה בטוחה וחזקה יותר מאשר בגרסת Gmail, בזכות נקודת אינטגרציה יציבה יותר עם תהליך השליחה.
       </p>
+
+      <section class="section-block" aria-labelledby="how-heading">
+        <h2 class="section-title" id="how-heading">איך זה עובד</h2>
+        <ol class="how-steps">
+          <li class="how-step">
+            <span class="num" aria-hidden="true">1</span>
+            <p>מתקינים את תוסף Outlook (מדריך התקנה למטה).</p>
+          </li>
+          <li class="how-step">
+            <span class="num" aria-hidden="true">2</span>
+            <p>שולחים לנו את כתובת הדואר של Outlook לאישור והפעלה.</p>
+          </li>
+          <li class="how-step">
+            <span class="num" aria-hidden="true">3</span>
+            <p>לאחר אישור — ההגנה פעילה אוטומטית בחשבון שלכם.</p>
+          </li>
+        </ol>
+      </section>
 
       <section class="tools" aria-label="סוגי התוסף">
         <article class="tool">
@@ -180,6 +418,71 @@
             <figcaption>תצוגת תוסף Outlook</figcaption>
           </figure>
         </article>
+      </section>
+
+      <section class="section-block" id="installation" aria-labelledby="install-heading">
+        <h2 class="section-title" id="install-heading">מדריך התקנה — Outlook</h2>
+        <p style="margin: 0 0 0.75rem; color: #d7e3ff; line-height: 1.65">
+          לפני ההתקנה, הורידו את קובץ המניפסט:
+          <a href="https://erlix.net/bcc-alert-addin/addin/manifest.xml" target="_blank" rel="noopener"
+            >manifest.xml</a
+          >
+          (שמרו במחשב).
+        </p>
+
+        <div class="install-details">
+          <details>
+            <summary>Outlook Desktop (Windows / Mac)</summary>
+            <div class="install-body">
+              <ol>
+                <li>פתחו את אפליקציית Outlook (לא דפדפן).</li>
+                <li>בחרו <strong>קובץ (File)</strong> → <strong>קבלת תוספים (Get Add-ins)</strong>.</li>
+                <li>בחרו <strong>תוספים מותאמים אישית (My Add-ins)</strong> → <strong>הוספה מותאמת (Add a custom add-in)</strong> → <strong>הוספה מהקובץ (Add from file)</strong>.</li>
+                <li>בחרו את קובץ <code>manifest.xml</code> שהורדתם מהקישור למעלה.</li>
+                <li>אשרו את ההתקנה. אם Outlook מבקש — סגרו ופתחו מחדש את Outlook.</li>
+                <li>בכתיבת הודעה חדשה, ודאו שהתוסף BCC Alert מופיע (בסרגל או בהגדרות התוספים).</li>
+              </ol>
+              <div class="screenshot-placeholder" aria-hidden="true">מקום לצילום מסך — התקנה ב-Outlook Desktop
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>Outlook Web (דפדפן)</summary>
+            <div class="install-body">
+              <ol>
+                <li>היכנסו ל-<a href="https://outlook.office.com/" target="_blank" rel="noopener">outlook.office.com</a>.</li>
+                <li>לחצו על <strong>הגדרות (Settings)</strong> → <strong>הצג את כל הגדרות Outlook</strong>.</li>
+                <li>עברו ל-<strong>דואר</strong> → <strong>תוספים מותאמים (Custom add-ins)</strong> (אם זמין בארגון שלכם).</li>
+                <li>בחרו <strong>הוספה מתוך קובץ / Add from file</strong> והעלו את <code>manifest.xml</code>.</li>
+                <li>אם האפשרות לא מופיעה — ייתכן שנדרשת התקנה מרכזית על ידי מנהל IT (Microsoft 365 Admin Center).</li>
+                <li>לאחר ההתקנה, רעננו את הדפדפן ופתחו הודעה חדשה לבדיקה.</li>
+              </ol>
+              <div class="screenshot-placeholder" aria-hidden="true">מקום לצילום מסך — התקנה ב-Outlook Web</div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section-block pricing-card" aria-labelledby="pricing-heading">
+        <h2 class="section-title" id="pricing-heading">מחירים</h2>
+        <ul>
+          <li><strong>ניסיון חינם:</strong> 7 ימים לאחר הפעלה ידנית של החשבון.</li>
+          <li><strong>מנוי:</strong> צרו קשר לקבלת הצעת מחיר — ללא תשלום אוטומטי בשלב זה.</li>
+        </ul>
+      </section>
+
+      <section class="section-block contact-section" id="contact-install" aria-labelledby="contact-heading">
+        <h2 class="section-title" id="contact-heading">הפעלה, תשלום ותמיכה</h2>
+        <p>צריכים הפעלת ניסיון, רכישת מנוי או עזרה בהתקנה?</p>
+        <a class="contact-email" href="mailto:erlix.co@gmail.com">erlix.co@gmail.com</a>
+        <p>
+          לאחר אישור ניסיון או תשלום, נפעיל את חשבון Outlook שלכם ידנית (שלחו את כתובת הדואר המדויקת כפי שמופיעה ב-Outlook).
+          ההגנה תופיע בתוך זמן קצר לאחר האישור.
+        </p>
+        <p style="margin-bottom: 0; color: #b6c7ea; font-size: 0.92rem">
+          אין עדיין הרשמה אוטומטית באתר — כל ההפעלות מתבצעות ידנית ללקוחות ראשונים.
+        </p>
       </section>
 
       <p class="powered-by">
