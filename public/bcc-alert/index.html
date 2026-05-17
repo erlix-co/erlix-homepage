@@ -394,6 +394,40 @@
         font-size: 0.94rem;
       }
 
+      .tool-install {
+        margin: 0.85rem 0 0;
+        text-align: center;
+        color: #d7e3ff;
+        line-height: 1.65;
+        font-size: 0.95rem;
+      }
+
+      .extension-download {
+        display: inline-block;
+        margin-inline-start: 0.15rem;
+        padding: 0.45rem 0.9rem;
+        border-radius: 10px;
+        border: 1px solid rgba(136, 182, 255, 0.45);
+        background: rgba(45, 140, 240, 0.2);
+        color: #9ed2ff;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        appearance: none;
+        vertical-align: middle;
+      }
+
+      .extension-download:disabled {
+        opacity: 0.65;
+        cursor: wait;
+      }
+
+      .extension-download:hover {
+        background: rgba(45, 140, 240, 0.35);
+      }
+
       @media (min-width: 860px) {
         .tools {
           grid-template-columns: 1fr 1fr;
@@ -536,6 +570,14 @@
               תצוגת תוסף Gmail בדפדפן כרום
             </figcaption>
           </figure>
+          <p class="tool-install lang-block" data-lang="he">
+            להתקנת תוסף
+            <button type="button" class="extension-download gmail-extension-download">לחץ כאן</button>
+          </p>
+          <p class="tool-install lang-block" data-lang="en" hidden>
+            To install the extension,
+            <button type="button" class="extension-download gmail-extension-download">click here</button>
+          </p>
         </article>
 
         <article class="tool">
@@ -698,6 +740,8 @@
     <script>
       const MANIFEST_URL = "/bcc-alert-addin/addin/manifest.xml";
       const MANIFEST_DOWNLOAD_NAME = "BCC-Alert-Outlook.xml";
+      const GMAIL_EXTENSION_URL = "/bcc-alert/BCC-Alert-Gmail-Chrome.zip";
+      const GMAIL_EXTENSION_DOWNLOAD_NAME = "BCC-Alert-Gmail-Chrome.zip";
 
       const heBtn = document.getElementById("lang-he");
       const enBtn = document.getElementById("lang-en");
@@ -706,37 +750,51 @@
       const altImages = Array.from(document.querySelectorAll("img[data-alt-he][data-alt-en]"));
       const toolsSection = document.querySelector(".tools[data-aria-he]");
 
-      document.querySelectorAll(".manifest-download").forEach((btn) => {
-        btn.addEventListener("click", async () => {
-          btn.disabled = true;
-          try {
-            const res = await fetch(MANIFEST_URL, { cache: "no-store" });
-            if (!res.ok) {
-              throw new Error("HTTP " + res.status);
+      async function downloadFromUrl(url, filename, errorLabel) {
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) {
+          throw new Error("HTTP " + res.status);
+        }
+        const blob = await res.blob();
+        const objectUrl = URL.createObjectURL(blob);
+        const temp = document.createElement("a");
+        temp.href = objectUrl;
+        temp.download = filename;
+        temp.rel = "noopener";
+        document.body.appendChild(temp);
+        temp.click();
+        temp.remove();
+        URL.revokeObjectURL(objectUrl);
+      }
+
+      function bindDownloadButtons(selector, url, filename, errorLabel) {
+        document.querySelectorAll(selector).forEach((btn) => {
+          btn.addEventListener("click", async () => {
+            btn.disabled = true;
+            try {
+              await downloadFromUrl(url, filename, errorLabel);
+            } catch (err) {
+              console.error(errorLabel + " failed:", err);
+              const isHe = document.documentElement.lang === "he";
+              window.alert(
+                isHe
+                  ? "לא הצלחנו להוריד את הקובץ. נסו שוב או פנו אלינו במייל."
+                  : "Could not download the file. Please try again or email us for help."
+              );
+            } finally {
+              btn.disabled = false;
             }
-            const blob = await res.blob();
-            const objectUrl = URL.createObjectURL(blob);
-            const temp = document.createElement("a");
-            temp.href = objectUrl;
-            temp.download = MANIFEST_DOWNLOAD_NAME;
-            temp.rel = "noopener";
-            document.body.appendChild(temp);
-            temp.click();
-            temp.remove();
-            URL.revokeObjectURL(objectUrl);
-          } catch (err) {
-            console.error("Manifest download failed:", err);
-            const isHe = document.documentElement.lang === "he";
-            window.alert(
-              isHe
-                ? "לא הצלחנו להוריד את הקובץ. נסו שוב או פנו אלינו במייל."
-                : "Could not download the file. Please try again or email us for help."
-            );
-          } finally {
-            btn.disabled = false;
-          }
+          });
         });
-      });
+      }
+
+      bindDownloadButtons(".manifest-download", MANIFEST_URL, MANIFEST_DOWNLOAD_NAME, "Manifest download");
+      bindDownloadButtons(
+        ".gmail-extension-download",
+        GMAIL_EXTENSION_URL,
+        GMAIL_EXTENSION_DOWNLOAD_NAME,
+        "Gmail extension download"
+      );
 
       function setLanguage(lang) {
         const isHe = lang === "he";
