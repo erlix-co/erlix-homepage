@@ -571,7 +571,7 @@
             </figcaption>
           </figure>
           <p class="tool-install lang-block" data-lang="he">
-            להתקנת תוסף
+            להתקנת התוסף
             <button type="button" class="extension-download gmail-extension-download">לחץ כאן</button>
           </p>
           <p class="tool-install lang-block" data-lang="en" hidden>
@@ -599,6 +599,101 @@
             <figcaption data-he="תצוגת תוסף Outlook" data-en="Outlook add-in preview">תצוגת תוסף Outlook</figcaption>
           </figure>
         </article>
+      </section>
+
+      <section class="section-block" id="installation-chrome" aria-labelledby="install-chrome-heading">
+        <h2
+          class="section-title"
+          id="install-chrome-heading"
+          data-he="מדריך התקנה — תוסף Chrome (Gmail)"
+          data-en="Installation guide — Chrome extension (Gmail)"
+        >
+          מדריך התקנה — תוסף Chrome (Gmail)
+        </h2>
+
+        <p class="install-lead lang-block" data-lang="he">
+          להתקנת התוסף, הורידו את הקובץ, חלצו אותו למחשב, והמשיכו לפי השלבים למטה.
+          <button type="button" class="extension-download gmail-extension-download">הורדת התוסף</button>
+        </p>
+        <p class="install-lead lang-block" data-lang="en" hidden>
+          To install the extension, download the file, extract it on your computer, then follow the steps below.
+          <button type="button" class="extension-download gmail-extension-download">Download extension</button>
+        </p>
+
+        <div class="install-details lang-block" data-lang="he">
+          <details open>
+            <summary>Google Chrome (Windows / Mac)</summary>
+            <div class="install-body">
+              <ol>
+                <li>לחצו על <strong>הורדת התוסף</strong> למעלה ושמרו את קובץ ה-ZIP.</li>
+                <li>חלצו (Unzip) את הקובץ לתיקייה — תיווצר תיקייה בשם <code>gmail-web-extension</code>.</li>
+                <li>
+                  בדפדפן Chrome, פתחו
+                  <a href="chrome://extensions/" target="_blank" rel="noopener"><code>chrome://extensions</code></a>
+                  (הדביקו בשורת הכתובת).
+                </li>
+                <li>הפעילו <strong>מצב מפתח (Developer mode)</strong> בפינה הימנית העליונה.</li>
+                <li>לחצו <strong>טעינת תוסף לא ארוז (Load unpacked)</strong> ובחרו את תיקיית <code>gmail-web-extension</code>.</li>
+                <li>פתחו <a href="https://mail.google.com/" target="_blank" rel="noopener">Gmail</a> ונסו לשלוח הודעה עם יותר מנמען גלוי אחד ב-To או ב-Cc — אמורה להופיע התרעה.</li>
+                <li>לצפייה במונה החסימות, לחצו על סמל התוסף בסרגל הדפדפן.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details>
+            <summary>Microsoft Edge (אופציונלי)</summary>
+            <div class="install-body">
+              <ol>
+                <li>הורידו וחלצו את הקובץ כמו ב-Chrome.</li>
+                <li>
+                  פתחו
+                  <a href="edge://extensions/" target="_blank" rel="noopener"><code>edge://extensions</code></a>.
+                </li>
+                <li>הפעילו <strong>מצב מפתח</strong> → <strong>טען לאריזה (Load unpacked)</strong> → בחרו את <code>gmail-web-extension</code>.</li>
+                <li>פתחו Gmail ב-Edge ובדקו שליחה עם מספר נמענים גלויים.</li>
+              </ol>
+            </div>
+          </details>
+        </div>
+
+        <div class="install-details lang-block" data-lang="en" hidden>
+          <details open>
+            <summary>Google Chrome (Windows / Mac)</summary>
+            <div class="install-body">
+              <ol>
+                <li>Click <strong>Download extension</strong> above and save the ZIP file.</li>
+                <li>Extract the ZIP — you should get a folder named <code>gmail-web-extension</code>.</li>
+                <li>
+                  In Chrome, open
+                  <a href="chrome://extensions/" target="_blank" rel="noopener"><code>chrome://extensions</code></a>
+                  (paste into the address bar).
+                </li>
+                <li>Turn on <strong>Developer mode</strong> (top-right).</li>
+                <li>Click <strong>Load unpacked</strong> and select the <code>gmail-web-extension</code> folder.</li>
+                <li>
+                  Open <a href="https://mail.google.com/" target="_blank" rel="noopener">Gmail</a> and try sending with more than one visible
+                  recipient in To or Cc — you should see a warning.
+                </li>
+                <li>Click the extension icon in the toolbar to view the protection counter.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details>
+            <summary>Microsoft Edge (optional)</summary>
+            <div class="install-body">
+              <ol>
+                <li>Download and extract the ZIP as for Chrome.</li>
+                <li>
+                  Open
+                  <a href="edge://extensions/" target="_blank" rel="noopener"><code>edge://extensions</code></a>.
+                </li>
+                <li>Enable <strong>Developer mode</strong> → <strong>Load unpacked</strong> → select <code>gmail-web-extension</code>.</li>
+                <li>Open Gmail in Edge and test a multi-recipient send.</li>
+              </ol>
+            </div>
+          </details>
+        </div>
       </section>
 
       <section class="section-block" id="installation" aria-labelledby="install-heading">
